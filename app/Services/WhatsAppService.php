@@ -4,7 +4,14 @@ declare(strict_types=1);
 namespace Siprima\Services;
 
 use mysqli;
+use Siprima\Services\WhatsApp\Providers\FonnteProvider;
+use Siprima\Services\WhatsApp\Providers\MetaCloudProvider;
+use Siprima\Services\WhatsApp\WhatsAppProviderInterface;
 use Throwable;
+
+require_once __DIR__ . '/WhatsApp/WhatsAppProviderInterface.php';
+require_once __DIR__ . '/WhatsApp/Providers/FonnteProvider.php';
+require_once __DIR__ . '/WhatsApp/Providers/MetaCloudProvider.php';
 
 final class WhatsAppService
 {
@@ -13,10 +20,40 @@ final class WhatsAppService
     /** @var callable|null Optional transport override for automated testing */
     private $httpSender = null;
 
-    public function __construct(mysqli $db)
+    /** @var WhatsAppProviderInterface|null Optional explicit provider override */
+    private ?WhatsAppProviderInterface $providerOverride = null;
+
+    public function __construct(mysqli $db, ?WhatsAppProviderInterface $provider = null)
     {
         $this->db = $db;
+        $this->providerOverride = $provider;
         $this->ensureTable();
+    }
+
+    /**
+     * Set provider eksplisit (untuk dependency injection atau pengujian otomatis)
+     */
+    public function setProvider(?WhatsAppProviderInterface $provider): void
+    {
+        $this->providerOverride = $provider;
+    }
+
+    /**
+     * Resolusi instance provider aktif berdasarkan WA_GATEWAY_PROVIDER di .env
+     */
+    public function getActiveProvider(): WhatsAppProviderInterface
+    {
+        if ($this->providerOverride !== null) {
+            return $this->providerOverride;
+        }
+        if (!function_exists('env')) {
+            require_once __DIR__ . '/../config/env_loader.php';
+        }
+        $providerKey = strtolower(trim((string)env('WA_GATEWAY_PROVIDER', 'meta_cloud')));
+        if ($providerKey === 'fonnte') {
+            return new FonnteProvider();
+        }
+        return new MetaCloudProvider();
     }
 
     /**
@@ -27,11 +64,27 @@ final class WhatsAppService
         $this->httpSender = $sender;
     }
 
+    /** @var bool Cache per-request agar ensureTable() tidak menjalankan DDL berulang */
+    private static bool $tableChecked = false;
+
     /**
-     * Pastikan tabel log notifikasi WhatsApp tersedia
+     * Pastikan tabel log notifikasi WhatsApp tersedia (tanpa memicu implicit commit DDL bila tabel sudah ada)
      */
     public function ensureTable(): void
     {
+        if (self::$tableChecked) {
+            return;
+        }
+        try {
+            $check = @$this->db->query("SHOW TABLES LIKE 'tb_whatsapp_log'");
+            if ($check && $check->num_rows > 0) {
+                self::$tableChecked = true;
+                return;
+            }
+        } catch (Throwable) {
+            // Lanjut ke fallback CREATE TABLE IF NOT EXISTS
+        }
+
         $sql = "CREATE TABLE IF NOT EXISTS `tb_whatsapp_log` (
             `id` INT NOT NULL AUTO_INCREMENT,
             `id_user` INT NULL,
@@ -51,6 +104,7 @@ final class WhatsAppService
 
         try {
             @$this->db->query($sql);
+            self::$tableChecked = true;
         } catch (Throwable) {
             // Non-blocking: lewati jika koneksi berstatus read-only atau DDL dibatasi
         }
@@ -69,8 +123,6 @@ final class WhatsAppService
             $clean = '62' . substr($clean, 1);
         } elseif (str_starts_with($clean, '8')) {
             $clean = '62' . $clean;
-        } elseif (str_starts_with($clean, '+62')) {
-            $clean = substr($clean, 1);
         }
         return $clean;
     }
@@ -121,9 +173,11 @@ final class WhatsAppService
         $text = (string)preg_replace('/\bAuthorization\s*:\s*(?:Bearer\s+|Basic\s+)?[^\s"\',}]+/i', 'Authorization: [DISAMARKAN]', $text);
         $text = (string)preg_replace('/\bBearer\s+[A-Za-z0-9\-_\.=]+/i', 'Bearer [DISAMARKAN]', $text);
         if (function_exists('env')) {
-            $apiKey = trim((string)env('WA_API_KEY', ''));
-            if ($apiKey !== '' && strlen($apiKey) >= 6) {
-                $text = str_replace($apiKey, '[KUNCI DISAMARKAN]', $text);
+            foreach (['WA_API_KEY', 'WA_META_ACCESS_TOKEN', 'WA_META_APP_SECRET', 'WA_META_WEBHOOK_VERIFY_TOKEN'] as $secretEnvKey) {
+                $secretVal = trim((string)env($secretEnvKey, ''));
+                if ($secretVal !== '' && strlen($secretVal) >= 6) {
+                    $text = str_replace($secretVal, '[KUNCI DISAMARKAN]', $text);
+                }
             }
         }
         if (mb_strlen($text, 'UTF-8') > 1000) {
@@ -133,7 +187,7 @@ final class WhatsAppService
     }
 
     /**
-     * Resolusi konfigurasi WhatsApp Gateway dari environment
+     * Resolusi konfigurasi WhatsApp Gateway dari environment & provider aktif
      */
     private function resolveGatewayConfig(): array
     {
@@ -141,26 +195,22 @@ final class WhatsAppService
             require_once __DIR__ . '/../config/env_loader.php';
         }
         $enabled = filter_var(env('WA_GATEWAY_ENABLED', false), FILTER_VALIDATE_BOOLEAN);
-        $provider = strtolower(trim((string)env('WA_GATEWAY_PROVIDER', 'cloud_api')));
-        $apiUrl = trim((string)env('WA_GATEWAY_URL', ''));
-        $apiKey = trim((string)env('WA_API_KEY', ''));
+        $providerObj = $this->getActiveProvider();
+        $providerName = $providerObj->getName();
+        $hasApiKey = $providerObj->hasApiKey();
+        $hasEndpoint = $providerObj->hasEndpoint();
+        $configured = $providerObj->isConfigured();
         $phoneNumberId = trim((string)env('WA_PHONE_NUMBER_ID', ''));
 
-        if ($apiUrl === '' && in_array($provider, ['meta', 'cloud_api', 'whatsapp_cloud'], true) && $phoneNumberId !== '') {
-            $apiUrl = "https://graph.facebook.com/v19.0/{$phoneNumberId}/messages";
-        }
-
-        $hasCredentials = ($apiKey !== '' && $apiUrl !== '');
         return [
             'enabled' => $enabled,
-            'provider' => $provider !== '' ? $provider : 'cloud_api',
-            'api_url' => $apiUrl,
-            'api_key' => $apiKey,
+            'provider' => $providerName,
+            'provider_instance' => $providerObj,
             'phone_number_id' => $phoneNumberId,
-            'has_api_key' => $apiKey !== '',
-            'has_gateway_url' => $apiUrl !== '',
-            'configured' => $hasCredentials,
-            'ready' => ($enabled && $hasCredentials),
+            'has_api_key' => $hasApiKey,
+            'has_gateway_url' => $hasEndpoint,
+            'configured' => $configured,
+            'ready' => ($enabled && $configured),
         ];
     }
 
@@ -170,29 +220,36 @@ final class WhatsAppService
     private function validatePemohonRecipient(?int $userId, string $fallbackPhone = ''): array
     {
         $resolvedPhone = $fallbackPhone;
+        $resolvedName = 'Pemohon';
         if ($userId !== null && $userId > 0) {
-            $stmtU = $this->db->prepare("SELECT role, no_hp, COALESCE(wa_consent, 1) AS wa_consent FROM tb_users WHERE id = ? LIMIT 1");
+            $stmtU = $this->db->prepare("SELECT nama, role, no_hp, COALESCE(wa_consent, 0) AS wa_consent FROM tb_users WHERE id = ? LIMIT 1");
             if ($stmtU) {
                 $stmtU->bind_param('i', $userId);
                 $stmtU->execute();
                 $uRow = $stmtU->get_result()->fetch_assoc();
                 $stmtU->close();
                 if ($uRow) {
+                    $namaUser = trim((string)($uRow['nama'] ?? ''));
+                    if ($namaUser !== '') {
+                        $resolvedName = $namaUser;
+                    }
                     $roleUser = strtolower(trim((string)($uRow['role'] ?? '')));
                     if ($roleUser !== 'user') {
                         return [
                             'allowed' => false,
                             'status' => 'skipped',
                             'phone' => self::formatNomorHp($fallbackPhone) ?: '-',
+                            'nama' => $resolvedName,
                             'note' => "Dilewati: Notifikasi WhatsApp hanya untuk Pemohon (role={$roleUser})",
                             'message' => 'WhatsApp hanya dikirim kepada Pemohon.',
                         ];
                     }
-                    if ((int)($uRow['wa_consent'] ?? 1) === 0) {
+                    if ((int)($uRow['wa_consent'] ?? 0) !== 1) {
                         return [
                             'allowed' => false,
                             'status' => 'skipped',
                             'phone' => self::formatNomorHp($fallbackPhone) ?: '-',
+                            'nama' => $resolvedName,
                             'note' => 'Dilewati: Pemohon belum/tidak menyetujui notifikasi WhatsApp',
                             'message' => 'Pemohon tidak menyetujui notifikasi WhatsApp.',
                         ];
@@ -211,6 +268,7 @@ final class WhatsAppService
                 'allowed' => false,
                 'status' => 'failed',
                 'phone' => $resolvedPhone,
+                'nama' => $resolvedName,
                 'note' => 'Nomor telepon pemohon kosong atau tidak valid (harus 10-15 digit).',
                 'message' => 'Nomor WhatsApp pemohon tidak valid.',
             ];
@@ -220,6 +278,7 @@ final class WhatsAppService
             'allowed' => true,
             'status' => 'ok',
             'phone' => $formattedPhone,
+            'nama' => $resolvedName,
             'note' => '',
             'message' => '',
         ];
@@ -230,17 +289,26 @@ final class WhatsAppService
      */
     public static function verifyProviderAcceptance(int $httpCode, string $rawBody, string $provider = 'generic'): array
     {
+        $providerLower = strtolower(trim($provider));
+        if (in_array($providerLower, ['meta', 'meta_cloud', 'cloud_api', 'whatsapp_cloud'], true)) {
+            $meta = new MetaCloudProvider('', '', 'v22.0');
+            return $meta->verifyAcceptance($httpCode, $rawBody);
+        }
+        if ($providerLower === 'fonnte') {
+            $fonnte = new FonnteProvider('https://api.fonnte.com/send', '');
+            return $fonnte->verifyAcceptance($httpCode, $rawBody);
+        }
+
         $trimmed = trim($rawBody);
         if ($httpCode < 200 || $httpCode >= 300) {
             return [
                 'accepted' => false,
                 'note' => self::sanitizeResponseNote("HTTP {$httpCode}: " . ($trimmed !== '' ? $trimmed : 'Respons gagal dari provider')),
+                'provider_message_id' => null,
             ];
         }
 
-        $providerLower = strtolower(trim($provider));
         $decoded = json_decode($trimmed, true);
-
         if (is_array($decoded)) {
             if (!empty($decoded['error'])) {
                 $errDetail = is_array($decoded['error'])
@@ -249,6 +317,7 @@ final class WhatsAppService
                 return [
                     'accepted' => false,
                     'note' => self::sanitizeResponseNote('Provider menolak pesan: ' . $errDetail),
+                    'provider_message_id' => null,
                 ];
             }
             if ((array_key_exists('status', $decoded) && $decoded['status'] === false)
@@ -257,27 +326,13 @@ final class WhatsAppService
                 return [
                     'accepted' => false,
                     'note' => self::sanitizeResponseNote('Provider melaporkan kegagalan: ' . $reason),
+                    'provider_message_id' => null,
                 ];
-            }
-            if (in_array($providerLower, ['meta', 'cloud_api', 'whatsapp_cloud'], true)) {
-                $hasMsgId = !empty($decoded['messages'][0]['id']);
-                if (!$hasMsgId) {
-                    return [
-                        'accepted' => false,
-                        'note' => self::sanitizeResponseNote('Konfirmasi message_id Meta Cloud API tidak ditemukan: ' . $trimmed),
-                    ];
-                }
-            } elseif ($providerLower === 'fonnte') {
-                if (empty($decoded['status'])) {
-                    return [
-                        'accepted' => false,
-                        'note' => self::sanitizeResponseNote('Konfirmasi status sukses Fonnte tidak ditemukan: ' . $trimmed),
-                    ];
-                }
             }
             return [
                 'accepted' => true,
                 'note' => self::sanitizeResponseNote($trimmed),
+                'provider_message_id' => null,
             ];
         }
 
@@ -285,6 +340,7 @@ final class WhatsAppService
             return [
                 'accepted' => false,
                 'note' => "HTTP {$httpCode}: Respons provider kosong tanpa konfirmasi penerimaan.",
+                'provider_message_id' => null,
             ];
         }
 
@@ -292,17 +348,21 @@ final class WhatsAppService
             return [
                 'accepted' => false,
                 'note' => self::sanitizeResponseNote("HTTP {$httpCode}: " . $trimmed),
+                'provider_message_id' => null,
             ];
         }
 
         return [
             'accepted' => true,
             'note' => self::sanitizeResponseNote($trimmed),
+            'provider_message_id' => null,
         ];
     }
 
     /**
      * Kirim notifikasi WhatsApp dengan penanganan error non-blocking
+     *
+     * @param array<string, mixed> $templateParams Parameter terstruktur opsional untuk template Meta Cloud API
      */
     public function kirimNotifikasi(
         ?int $userId,
@@ -310,7 +370,8 @@ final class WhatsAppService
         int $permohonanId,
         string $eventType,
         string $pesan,
-        string $sourceTable = 'tb_pengajuan_kia'
+        string $sourceTable = 'tb_pengajuan_kia',
+        array $templateParams = []
     ): array {
         try {
             if (trim($pesan) === '') {
@@ -337,22 +398,28 @@ final class WhatsAppService
                 return ['success' => true, 'skipped' => true, 'status' => 'skipped', 'message' => 'Notifikasi sudah pernah terkirim.'];
             }
 
-            // Cek konfigurasi environment
+            // Cek konfigurasi environment & provider aktif
             $config = $this->resolveGatewayConfig();
             if (!$config['ready']) {
                 $note = !$config['configured']
-                    ? 'WA_API_KEY atau WA_GATEWAY_URL/WA_PHONE_NUMBER_ID belum dikonfigurasi di app/config/.env'
+                    ? 'Kredensial atau endpoint provider WhatsApp belum lengkap di app/config/.env'
                     : 'WA_GATEWAY_ENABLED masih nonaktif di app/config/.env';
                 $this->catatLog($userId, $formattedPhone, $permohonanId, $sourceTable, $eventType, $pesan, 'skipped', $note);
                 return ['success' => true, 'skipped' => true, 'status' => 'skipped', 'message' => 'Gateway WhatsApp belum diaktifkan di konfigurasi.'];
             }
 
-            // Kirim request ke gateway WhatsApp dan verifikasi konfirmasi penerimaan dari provider
-            $response = $this->dispatchHttpRequest($config['api_url'], $config['api_key'], $formattedPhone, $pesan, $config['provider']);
-            $acceptance = self::verifyProviderAcceptance(
+            /** @var WhatsAppProviderInterface $providerObj */
+            $providerObj = $config['provider_instance'];
+            $mergedParams = array_merge([
+                'nama' => $recipient['nama'] ?? 'Pemohon',
+                'permohonan_id' => $permohonanId,
+            ], $templateParams);
+
+            // Kirim request ke provider aktif dan verifikasi konfirmasi penerimaan
+            $response = $providerObj->send($formattedPhone, $pesan, $eventType, $mergedParams, $this->httpSender);
+            $acceptance = $providerObj->verifyAcceptance(
                 (int)($response['http_code'] ?? 0),
-                (string)($response['raw'] ?? ''),
-                $config['provider']
+                (string)($response['raw'] ?? '')
             );
             $isSuccess = $acceptance['accepted'];
             $finalStatus = $isSuccess ? 'sent' : 'failed';
@@ -371,8 +438,10 @@ final class WhatsAppService
             return [
                 'success' => $isSuccess,
                 'status' => $finalStatus,
+                'provider' => $providerObj->getName(),
                 'http_code' => $response['http_code'] ?? 0,
-                'response' => $acceptance['note']
+                'response' => $acceptance['note'],
+                'provider_message_id' => $acceptance['provider_message_id'] ?? null,
             ];
         } catch (Throwable $e) {
             // Catat kegagalan tanpa menghentikan proses utama
@@ -443,11 +512,16 @@ final class WhatsAppService
             return ['success' => false, 'status' => $nextStatus, 'message' => $note];
         }
 
-        $response = $this->dispatchHttpRequest($config['api_url'], $config['api_key'], $formattedPhone, $pesan, $config['provider']);
-        $acceptance = self::verifyProviderAcceptance(
+        /** @var WhatsAppProviderInterface $providerObj */
+        $providerObj = $config['provider_instance'];
+        $templateParams = [
+            'nama' => $recipient['nama'] ?? 'Pemohon',
+            'permohonan_id' => $permohonanId,
+        ];
+        $response = $providerObj->send($formattedPhone, $pesan, $eventType, $templateParams, $this->httpSender);
+        $acceptance = $providerObj->verifyAcceptance(
             (int)($response['http_code'] ?? 0),
-            (string)($response['raw'] ?? ''),
-            $config['provider']
+            (string)($response['raw'] ?? '')
         );
         $isSuccess = $acceptance['accepted'];
         $finalStatus = $isSuccess ? 'sent' : 'failed';
@@ -456,6 +530,7 @@ final class WhatsAppService
         return [
             'success' => $isSuccess,
             'status' => $finalStatus,
+            'provider' => $providerObj->getName(),
             'http_code' => $response['http_code'] ?? 0,
             'message' => $isSuccess
                 ? "Notifikasi #{$logId} berhasil dikirim dan dikonfirmasi provider."
@@ -512,20 +587,6 @@ final class WhatsAppService
         return $summary;
     }
 
-    private function dispatchHttpRequest(string $url, string $apiKey, string $phone, string $message, string $provider): array
-    {
-        if (is_callable($this->httpSender)) {
-            $result = call_user_func($this->httpSender, $url, $apiKey, $phone, $message, $provider);
-            if (is_array($result)) {
-                return [
-                    'http_code' => (int)($result['http_code'] ?? 0),
-                    'raw' => (string)($result['raw'] ?? ''),
-                ];
-            }
-        }
-        return $this->executeHttpRequest($url, $apiKey, $phone, $message, $provider);
-    }
-
     private function updateLogEntry(int $logId, string $noHp, string $status, string $responseNote): void
     {
         try {
@@ -539,80 +600,6 @@ final class WhatsAppService
         } catch (Throwable) {
             // Silence update error
         }
-    }
-
-    /**
-     * Eksekusi HTTP request ke penyedia WhatsApp Gateway
-     */
-    private function executeHttpRequest(string $url, string $apiKey, string $phone, string $message, string $provider): array
-    {
-        if (function_exists('curl_init')) {
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $url);
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-            curl_setopt($ch, CURLOPT_TIMEOUT, 8);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-
-            if (in_array($provider, ['meta', 'cloud_api', 'whatsapp_cloud'], true)) {
-                curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                    "Authorization: Bearer {$apiKey}",
-                    "Content-Type: application/json"
-                ]);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
-                    'messaging_product' => 'whatsapp',
-                    'recipient_type' => 'individual',
-                    'to' => $phone,
-                    'type' => 'text',
-                    'text' => ['preview_url' => false, 'body' => $message]
-                ]));
-            } elseif ($provider === 'fonnte') {
-                curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                    "Authorization: {$apiKey}"
-                ]);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, [
-                    'target' => $phone,
-                    'message' => $message,
-                    'countryCode' => '62'
-                ]);
-            } else {
-                // Format generic JSON API
-                curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                    "Authorization: Bearer {$apiKey}",
-                    "Content-Type: application/json"
-                ]);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
-                    'phone' => $phone,
-                    'message' => $message
-                ]));
-            }
-
-            $raw = curl_exec($ch);
-            $httpCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            $err = curl_error($ch);
-            curl_close($ch);
-
-            if ($raw === false) {
-                return ['http_code' => 500, 'raw' => 'cURL Error: ' . $err];
-            }
-            return ['http_code' => $httpCode, 'raw' => $raw];
-        }
-
-        // Fallback file_get_contents
-        $context = stream_context_create([
-            'http' => [
-                'method' => 'POST',
-                'header' => "Authorization: {$apiKey}\r\nContent-Type: application/x-www-form-urlencoded\r\n",
-                'content' => http_build_query(['target' => $phone, 'message' => $message]),
-                'timeout' => 8
-            ]
-        ]);
-        $raw = @file_get_contents($url, false, $context);
-        return [
-            'http_code' => ($raw !== false ? 200 : 500),
-            'raw' => ($raw !== false ? $raw : 'Gagal mengirim request via file_get_contents')
-        ];
     }
 
     /**
@@ -681,9 +668,10 @@ final class WhatsAppService
     public function getConfigurationChecklist(): array
     {
         $config = $this->resolveGatewayConfig();
-        $isMeta = in_array($config['provider'], ['meta', 'cloud_api', 'whatsapp_cloud'], true);
+        /** @var WhatsAppProviderInterface $providerObj */
+        $providerObj = $config['provider_instance'];
 
-        return [
+        $common = [
             [
                 'key' => 'WA_GATEWAY_ENABLED',
                 'label' => 'Aktivasi Pengiriman Gateway',
@@ -696,25 +684,11 @@ final class WhatsAppService
                 'label' => 'Penyedia Layanan Gateway',
                 'configured' => $config['provider'] !== '',
                 'value_display' => strtoupper($config['provider']),
-                'description' => 'Isi dengan fonnte, cloud_api (Meta), atau generic sesuai layanan WhatsApp Gateway yang digunakan.',
-            ],
-            [
-                'key' => 'WA_API_KEY',
-                'label' => 'Token / API Key Provider',
-                'configured' => $config['has_api_key'],
-                'value_display' => $config['has_api_key'] ? 'Tersedia (Disembunyikan)' : 'Belum diisi',
-                'description' => 'Diperlukan untuk autentikasi permintaan API ke penyedia WhatsApp Gateway.',
-            ],
-            [
-                'key' => $isMeta ? 'WA_PHONE_NUMBER_ID' : 'WA_GATEWAY_URL',
-                'label' => $isMeta ? 'Phone Number ID / URL Cloud API' : 'Endpoint URL Gateway WhatsApp',
-                'configured' => $config['has_gateway_url'],
-                'value_display' => $config['has_gateway_url'] ? 'Tersedia (' . ($isMeta && $config['phone_number_id'] !== '' ? 'Phone ID diisi' : 'URL Endpoint diisi') . ')' : 'Belum diisi',
-                'description' => $isMeta
-                    ? 'Isi WA_PHONE_NUMBER_ID atau WA_GATEWAY_URL lengkap untuk Meta WhatsApp Cloud API.'
-                    : 'Endpoint HTTP POST penyedia gateway (mis. https://api.fonnte.com/send).',
+                'description' => 'Isi dengan meta_cloud (Meta WhatsApp Cloud API resmi) atau fonnte sebagai provider alternatif.',
             ],
         ];
+
+        return array_merge($common, $providerObj->getConfigurationChecklist());
     }
 
     /**

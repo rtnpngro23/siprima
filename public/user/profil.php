@@ -7,10 +7,11 @@ $user_id = $_SESSION['id_user'];
 $csrf_token_value = csrf_token();
 
 // Ambil info user
-$stmt = $koneksi->prepare("SELECT id, nama, nik, email, no_hp, role, alamat FROM tb_users WHERE id = ?");
+$stmt = $koneksi->prepare("SELECT id, nama, nik, email, no_hp, role, alamat, COALESCE(wa_consent, 0) AS wa_consent FROM tb_users WHERE id = ?");
 $stmt->bind_param('i', $user_id);
 $stmt->execute();
 $user = $stmt->get_result()->fetch_assoc();
+$currentWaConsent = (int)($user['wa_consent'] ?? 0) === 1 ? 1 : 0;
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -80,6 +81,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 error_log('Gagal mengubah password pengguna ID ' . $user_id . ': ' . $u->error);
                 $errors[] = 'Password gagal diubah. Silakan coba lagi.';
             }
+        }
+    } elseif ($action === 'update_wa_consent') {
+        $rawConsent = $_POST['wa_consent'] ?? '';
+        if (!in_array($rawConsent, ['0', '1'], true)) {
+            $errors[] = 'Pilihan persetujuan notifikasi WhatsApp tidak valid.';
+        } else {
+            $newConsent = (int)$rawConsent;
+            $u = $koneksi->prepare("UPDATE tb_users SET wa_consent = ? WHERE id = ?");
+            if ($u) {
+                $u->bind_param('ii', $newConsent, $user_id);
+                if ($u->execute()) {
+                    $_SESSION['success_message'] = $newConsent === 1
+                        ? 'Persetujuan notifikasi WhatsApp berhasil diaktifkan.'
+                        : 'Notifikasi WhatsApp berhasil dinonaktifkan.';
+                    header('Location: profil.php');
+                    exit;
+                }
+                error_log('Gagal memperbarui wa_consent pengguna ID ' . $user_id . ': ' . $u->error);
+                $u->close();
+            }
+            $errors[] = 'Preferensi notifikasi WhatsApp gagal disimpan. Silakan coba lagi.';
         }
     }
 }
@@ -183,6 +205,36 @@ if (isset($_SESSION['success_message'])) {
             </div>
 
             <button type="submit" class="btn-primary">Simpan Perubahan</button>
+          </form>
+
+          <hr class="my-6">
+
+          <form method="POST" class="space-y-6" id="waConsentForm">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token_value, ENT_QUOTES, 'UTF-8') ?>">
+            <input type="hidden" name="action" value="update_wa_consent">
+            <div class="password-section-header">
+              <h3 class="password-section-title">Preferensi Notifikasi WhatsApp</h3>
+              <p class="helper">
+                Persetujuan ini bersifat <strong>sukarela</strong> dan dapat diubah kapan saja tanpa memengaruhi proses pelayanan Anda.
+                Notifikasi hanya berisi pemberitahuan status permohonan dan arahan membuka SIPRIMA (tidak mengirim NIK, Nomor KK, atau berkas dokumen).
+              </p>
+            </div>
+
+            <fieldset style="border:1px solid #d1d5db;border-radius:10px;padding:14px 16px;background:#f8fafc;">
+              <legend style="font-weight:600;font-size:14px;padding:0 6px;color:#0f172a;">Status Persetujuan Saat Ini: <?= $currentWaConsent === 1 ? 'Setuju (Aktif)' : 'Tidak Setuju (Nonaktif)' ?></legend>
+              <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px;">
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:14px;color:#1e293b;">
+                  <input type="radio" name="wa_consent" value="1" <?= $currentWaConsent === 1 ? 'checked' : '' ?> style="margin-top:3px;">
+                  <span><strong>Setuju</strong> — Saya menyetujui menerima pemberitahuan status layanan KIA melalui WhatsApp resmi SIPRIMA.</span>
+                </label>
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:14px;color:#1e293b;">
+                  <input type="radio" name="wa_consent" value="0" <?= $currentWaConsent === 0 ? 'checked' : '' ?> style="margin-top:3px;">
+                  <span><strong>Tidak Setuju</strong> — Jangan kirimkan notifikasi WhatsApp ke nomor saya (pantau status langsung melalui akun SIPRIMA).</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn-primary">Simpan Preferensi Notifikasi</button>
           </form>
 
           <hr class="my-6">

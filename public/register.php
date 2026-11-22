@@ -35,7 +35,8 @@ $formData = [
     'nik' => '',
     'email' => '',
     'alamat' => '',
-    'no_hp' => ''
+    'no_hp' => '',
+    'wa_consent' => '0'
 ];
 
 // 1. PENGGUNAAN KONEKSI TERPUSAT
@@ -50,7 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'nik' => $_POST['nik'] ?? '',
         'email' => $_POST['email'] ?? '',
         'alamat' => $_POST['alamat'] ?? '',
-        'no_hp' => $_POST['no_hp'] ?? ''
+        'no_hp' => $_POST['no_hp'] ?? '',
+        'wa_consent' => (($_POST['wa_consent'] ?? '0') === '1') ? '1' : '0'
     ];
     $password = $_POST['password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
@@ -103,17 +105,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $role = 'user';
             
-            // Insert data
-            $insert_stmt = $koneksi->prepare("INSERT INTO tb_users (nama, nik, email, password, role, alamat, no_hp, created_at) 
-                                            VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
-            $insert_stmt->bind_param("sssssss", 
+            // Insert data (termasuk preferensi persetujuan notifikasi WhatsApp secara eksplisit)
+            $waConsentInt = ($formData['wa_consent'] === '1') ? 1 : 0;
+            $insert_stmt = $koneksi->prepare("INSERT INTO tb_users (nama, nik, email, password, role, alamat, no_hp, wa_consent, created_at) 
+                                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+            $insert_stmt->bind_param("sssssssi", 
                 $formData['nama'], 
                 $formData['nik'], 
                 $formData['email'], 
                 $hashed_password, 
                 $role, 
                 $formData['alamat'], 
-                $formData['no_hp']
+                $formData['no_hp'],
+                $waConsentInt
             );
             
             if ($insert_stmt->execute()) {
@@ -288,6 +292,21 @@ if (isset($koneksi)) {
 
             <label>No HP</label>
             <input type="text" name="no_hp" value="<?= htmlspecialchars($formData['no_hp']) ?>" required>
+
+            <div style="margin:12px 0 16px;padding:12px 14px;border:1px solid #d1d5db;border-radius:8px;background:#f8fafc;text-align:left;">
+                <div style="font-weight:600;font-size:13.5px;color:#0f172a;margin-bottom:4px;">Notifikasi WhatsApp Status Layanan (Sukarela / Opsional)</div>
+                <p style="margin:0 0 8px;font-size:12.5px;color:#475569;line-height:1.45;">
+                    Persetujuan ini bersifat <strong>sukarela</strong> dan tidak memengaruhi pendaftaran maupun proses permohonan. Anda dapat mengubah pilihan kapan saja di halaman Profil. Notifikasi tidak mengirim NIK, Nomor KK, atau dokumen.
+                </p>
+                <label style="display:flex;align-items:flex-start;gap:8px;font-weight:400;font-size:13px;color:#1e293b;margin:0 0 6px;cursor:pointer;">
+                    <input type="radio" name="wa_consent" value="1" <?= ($formData['wa_consent'] ?? '0') === '1' ? 'checked' : '' ?> style="width:auto;margin-top:2px;">
+                    <span><strong>Setuju</strong> menerima notifikasi status layanan KIA melalui WhatsApp.</span>
+                </label>
+                <label style="display:flex;align-items:flex-start;gap:8px;font-weight:400;font-size:13px;color:#1e293b;margin:0;cursor:pointer;">
+                    <input type="radio" name="wa_consent" value="0" <?= ($formData['wa_consent'] ?? '0') !== '1' ? 'checked' : '' ?> style="width:auto;margin-top:2px;">
+                    <span><strong>Tidak Setuju</strong> — Saya akan memantau status langsung melalui akun SIPRIMA.</span>
+                </label>
+            </div>
 
             <button type="submit" class="btn-register" id="registerButton">Daftar</button>
         </form>

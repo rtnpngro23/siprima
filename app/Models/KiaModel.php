@@ -594,7 +594,18 @@ final class KiaModel
             $finalPesan = str_replace('{NAMA}', $namaPemohon, $pesan);
             require_once __DIR__ . '/../Services/WhatsAppService.php';
             $waService = new \Siprima\Services\WhatsAppService($this->db);
-            $waService->kirimNotifikasi($userId, (string)($userInfo['no_hp'] ?? ''), $permohonanId, $eventType, $finalPesan, 'tb_pengajuan_kia');
+            $waService->kirimNotifikasi(
+                $userId,
+                (string)($userInfo['no_hp'] ?? ''),
+                $permohonanId,
+                $eventType,
+                $finalPesan,
+                'tb_pengajuan_kia',
+                [
+                    'nama' => $namaPemohon,
+                    'permohonan_id' => $permohonanId,
+                ]
+            );
         } catch (Throwable $eWa) {
             error_log("[WA_NOTIF] Gagal kirim WA ({$eventType}) pengajuan #{$permohonanId}: " . $eWa->getMessage());
         }
@@ -699,6 +710,7 @@ final class KiaModel
                 meta: ['versi' => $currVersi]
             );
 
+            $pendingWaNotifications = [];
             if (!empty($ownerRow['id_user'])) {
                 $ownerId = (int)$ownerRow['id_user'];
                 if ($newStatus === 'diproses') {
@@ -720,13 +732,13 @@ final class KiaModel
                         targetUrl: "user/status_permohonan.php"
                     );
 
-                    // Notifikasi WhatsApp KHUSUS Pemohon (singkat, tanpa alasan detail atau NIK/KK)
-                    $this->sendWhatsAppToPemohon(
-                        userId: $ownerId,
-                        permohonanId: $id,
-                        eventType: 'kia_ditolak_v' . $currVersi,
-                        pesan: "Halo {NAMA}, permohonan KIA Anda (#{$id}) memerlukan perbaikan data atau dokumen. Silakan masuk ke SIPRIMA untuk membaca catatan petugas dan mengirimkan perbaikan."
-                    );
+                    // Notifikasi WhatsApp KHUSUS Pemohon (dikirim setelah commit transaksi DB)
+                    $pendingWaNotifications[] = [
+                        'userId' => $ownerId,
+                        'permohonanId' => $id,
+                        'eventType' => 'kia_ditolak_v' . $currVersi,
+                        'pesan' => "Halo {NAMA}, permohonan KIA Anda (#{$id}) memerlukan perbaikan data atau dokumen. Silakan masuk ke SIPRIMA untuk membaca catatan petugas dan mengirimkan perbaikan.",
+                    ];
                 } elseif ($newStatus === 'selesai') {
                     $this->kirimNotifikasi(
                         userId: $ownerId,
@@ -737,27 +749,37 @@ final class KiaModel
                         targetUrl: "user/status_permohonan.php"
                     );
 
-                    // Notifikasi WhatsApp KHUSUS Pemohon
-                    $this->sendWhatsAppToPemohon(
-                        userId: $ownerId,
-                        permohonanId: $id,
-                        eventType: 'kia_selesai',
-                        pesan: "Halo {NAMA}, permohonan Kartu Identitas Anak (KIA) Anda (#{$id}) telah selesai diproses. Silakan masuk ke SIPRIMA untuk informasi lebih lanjut dan mengakses dokumen Anda."
-                    );
+                    // Notifikasi WhatsApp KHUSUS Pemohon (dikirim setelah commit transaksi DB)
+                    $pendingWaNotifications[] = [
+                        'userId' => $ownerId,
+                        'permohonanId' => $id,
+                        'eventType' => 'kia_selesai',
+                        'pesan' => "Halo {NAMA}, permohonan Kartu Identitas Anak (KIA) Anda (#{$id}) telah selesai diproses. Silakan masuk ke SIPRIMA untuk informasi lebih lanjut dan mengakses dokumen Anda.",
+                    ];
 
                     $pdfInfoNow = $this->getHasilPdfStatusByPengajuan($id);
                     if (!empty($pdfInfoNow['uploaded_count'])) {
-                        $this->sendWhatsAppToPemohon(
-                            userId: $ownerId,
-                            permohonanId: $id,
-                            eventType: 'kia_pdf_tersedia',
-                            pesan: "Halo {NAMA}, dokumen PDF KIA pada permohonan #{$id} sudah tersedia dan dapat dilihat atau diunduh melalui akun SIPRIMA Anda."
-                        );
+                        $pendingWaNotifications[] = [
+                            'userId' => $ownerId,
+                            'permohonanId' => $id,
+                            'eventType' => 'kia_pdf_tersedia',
+                            'pesan' => "Halo {NAMA}, dokumen PDF KIA pada permohonan #{$id} sudah tersedia dan dapat dilihat atau diunduh melalui akun SIPRIMA Anda.",
+                        ];
                     }
                 }
             }
 
             $this->db->commit();
+
+            // Kirim notifikasi WhatsApp secara non-blocking setelah transaksi DB berhasil commit
+            foreach ($pendingWaNotifications as $waJob) {
+                $this->sendWhatsAppToPemohon(
+                    userId: $waJob['userId'],
+                    permohonanId: $waJob['permohonanId'],
+                    eventType: $waJob['eventType'],
+                    pesan: $waJob['pesan']
+                );
+            }
 
             return [
                 'id_pengajuan' => $id,
@@ -2949,22 +2971,20 @@ final class KiaModel
                         permohonanId: $idPengajuan,
                         targetUrl: "user/status_permohonan.php"
                     );
-
-                    // Notifikasi WhatsApp otomatis ke nomor pemohon
-                    try {
-                        $userInfo = $this->getUserPhoneAndName($ownerId);
-                        $namaPemohon = trim((string)($userInfo['nama'] ?? '')) !== '' ? trim((string)$userInfo['nama']) : 'Pemohon';
-                        require_once __DIR__ . '/../Services/WhatsAppService.php';
-                        $waService = new \Siprima\Services\WhatsAppService($this->db);
-                        $pesanWa = "Halo {$namaPemohon}, hasil cetak KIA Anda sudah siap diambil. Silakan datang ke kantor Dinas Kependudukan dan Pencatatan Sipil Kabupaten Gorontalo untuk melakukan pengambilan.";
-                        $waService->kirimNotifikasi($ownerId, $userInfo['no_hp'], $idPengajuan, 'kia_selesai_dicetak', $pesanWa, 'tb_pengajuan_kia');
-                    } catch (\Throwable $eWa) {
-                        error_log("[WA_NOTIF] Gagal kirim WA selesai cetak pengajuan #{$idPengajuan}: " . $eWa->getMessage());
-                    }
                 }
             }
 
             $this->db->commit();
+
+            // Notifikasi WhatsApp KHUSUS Pemohon setelah transaksi DB berhasil commit
+            if ($ownerId > 0 && $statusCetakBaru === 'selesai_dicetak') {
+                $this->sendWhatsAppToPemohon(
+                    userId: $ownerId,
+                    permohonanId: $idPengajuan,
+                    eventType: 'kia_selesai_dicetak',
+                    pesan: "Halo {NAMA}, hasil cetak KIA Anda (#{$idPengajuan}) sudah siap diambil. Silakan datang ke kantor Dinas Kependudukan dan Pencatatan Sipil Kabupaten Gorontalo untuk melakukan pengambilan."
+                );
+            }
 
             return $this->getCetakKiaByPengajuan($idPengajuan) ?? [
                 'id_pengajuan' => $idPengajuan,
