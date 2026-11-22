@@ -1,0 +1,117 @@
+# ==============================================================================
+# SIPRIMA - Git Ignore Rules (Clean Pre-Deployment Configuration)
+# ==============================================================================
+
+# File konfigurasi sensitif & kredensial (WAJIB DIKECUALIKAN)
+.env
+.env.*
+!.env.example
+app/config/.env
+app/config/.env.*
+app/config/*.env
+!app/config/*.env.example
+app/config/koneksi_prod.php
+sql/env
+config/database.php
+config.php
+connection.php
+config_email.php
+koneksi.php
+backup_siprima_monthly.php
+cleanup_uploads_jan_apr_2026.php
+
+# Dependency & vendor third-party
+/vendor/
+/node_modules/
+/config/
+/pdfjs/
+
+# Direktori upload dokumen pemohon & file pengujian (WAJIB DIKECUALIKAN)
+/uploads/
+/public/uploads/
+/public/user/uploads/
+/public/user_ahlak/uploads/
+/public/user_kua/uploads/
+/public/user_rs/uploads/
+/public/siprima/
+/assets/uploads/
+/documents/
+/images/
+/storage/whistleblowing/
+
+# Log runtime & debug
+*.log
+error_log
+error_log.txt
+/error_logs/
+/logs/
+/private_logs/
+public/user/debug.log
+
+# Session, cache, & file sementara runtime
+/app/cache/
+/sessions/
+/tmp/
+session/
+session_data/
+cache/
+*.cache
+/temp/
+/export/
+/reports/
+/temp_export/
+
+# Dump & backup database (DDL skema di sql/*.sql tetap diizinkan, data/dump dikecualikan)
+/database/backups/
+/database/backup/
+/database/dumps/
+backup/
+si_prima.sql
+db_dukcapil7501.sql
+*.sql.gz
+*.db
+*.sqlite
+!sql/*.sql
+!sql/*.php
+!sql/*.md
+
+# Folder backup historis & file cadangan
+/_backup_*/
+*.backup
+*.bak
+*.old
+*.orig
+*.tmp
+*.swp
+*.swo
+public/user/dashboard_operator.php.bak
+
+# Artefak draf, catatan sementara, agen AI, & file yatim
+/draf_laporan_kia/
+/scratch/
+/skills/
+index_.html
+public/login_pasutri_ahlak.php
+.agent/
+.claude/
+AGENTS.md
+GEMINI.md
+ARSITEKTUR_SIPRIMA.md
+PRD_SIPRIMA.md
+build_app_android_SIPRIMA.md
+rencana_perbaikan_keamanan.md
+update.md
+
+# File sistem & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Konfigurasi server lokal (kecuali aturan routing API & storage)
+.htaccess
+!storage/.htaccess
+!public/api/v1/.htaccess
+php.ini
+/public/cleanup_uploads.php

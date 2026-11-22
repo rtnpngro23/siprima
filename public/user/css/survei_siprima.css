@@ -1,0 +1,234 @@
+/* ==========================================================================
+   SI PRIMA - Redesign Halaman Survei Kepuasan (SKM / SPKP / SPAK)
+   Selaras dengan palet & tipografi resmi Index & Login SIPRIMA
+   ========================================================================== */
+
+body,
+.survei-wrapper,
+.survei-wrapper * {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.survei-wrapper {
+    max-width: 840px;
+    margin: 0 auto 48px auto;
+}
+
+.survei-hero {
+    background: #dceae7 !important;
+    color: #0f172a !important;
+    border: 1px solid #c6d8d4 !important;
+    border-top: 3px solid #0b6e75 !important;
+    border-radius: 14px !important;
+    padding: 20px 24px !important;
+    box-shadow: 0 4px 14px rgba(11, 110, 117, 0.06) !important;
+}
+
+.survei-hero-icon {
+    background: #0b6e75 !important;
+    color: #ffffff !important;
+}
+
+.survei-hero h2 {
+    color: #0f172a !important;
+}
+
+.survei-hero p {
+    color: #475569 !important;
+}
+
+.survei-stepper {
+    background: #f2f6f5 !important;
+    border: 1px solid #c6d8d4 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+}
+
+.survei-step-pill {
+    background: #e9f0ee !important;
+    border: 1px solid #c6d8d4 !important;
+    color: #475569 !important;
+}
+
+.survei-step-pill .step-num {
+    background: #c6d8d4 !important;
+    color: #0f172a !important;
+}
+
+.survei-step-pill.active {
+    background: linear-gradient(135deg, #0b6e75 0%, #16858a 100%) !important;
+    border-color: #0b6e75 !important;
+    color: #ffffff !important;
+    box-shadow: 0 3px 10px rgba(11, 110, 117, 0.2) !important;
+}
+
+.survei-step-pill.active .step-num {
+    background: #ffffff !important;
+    color: #0b6e75 !important;
+}
+
+.survei-step-pill.done {
+    background: #dceae7 !important;
+    border-color: #a6ceca !important;
+    color: #0b6e75 !important;
+}
+
+.survei-step-pill.done .step-num {
+    background: #0b6e75 !important;
+    color: #ffffff !important;
+}
+
+.survei-card {
+    background: #f2f6f5 !important;
+    border: 1px solid #c6d8d4 !important;
+    border-radius: 14px !important;
+    padding: 24px 26px !important;
+    box-shadow: 0 4px 14px rgba(11, 110, 117, 0.06) !important;
+}
+
+.survei-section-header {
+    background: #dceae7 !important;
+    border: 1px solid #c6d8d4 !important;
+    border-left: 4px solid #0b6e75 !important;
+    border-radius: 10px !important;
+}
+
+.survei-section-header h3 {
+    color: #0f172a !important;
+}
+
+.survei-section-header p {
+    color: #334155 !important;
+}
+
+.survei-counter-badge {
+    background: #f2f6f5 !important;
+    color: #0b6e75 !important;
+    border: 1px solid #a6ceca !important;
+}
+
+.survei-label {
+    color: #0f172a !important;
+}
+
+.survei-input,
+.survei-select,
+.survei-textarea {
+    background: #f9fcfb !important;
+    border: 1px solid #a9c2bd !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
+}
+
+.survei-input:focus,
+.survei-select:focus,
+.survei-textarea:focus {
+    border-color: #0b6e75 !important;
+    box-shadow: 0 0 0 3px rgba(11, 110, 117, 0.14) !important;
+    background: #ffffff !important;
+}
+
+.gender-btn {
+    background: #f9fcfb !important;
+    border: 1px solid #a9c2bd !important;
+    color: #334155 !important;
+    border-radius: 8px !important;
+}
+
+.gender-btn.selected {
+    background: #dceae7 !important;
+    border-color: #0b6e75 !important;
+    color: #0b6e75 !important;
+}
+
+.q-card {
+    background: #f9fcfb !important;
+    border: 1px solid #c6d8d4 !important;
+    border-radius: 12px !important;
+    padding: 18px 20px !important;
+    margin-bottom: 16px !important;
+}
+
+.q-card.answered {
+    border-color: #0b6e75 !important;
+    background: #eef5f3 !important;
+}
+
+.q-badge,
+.q-badge.spkp,
+.q-badge.spak,
+.q-anti-korupsi-pill {
+    background: #dceae7 !important;
+    color: #0b6e75 !important;
+    border: 1px solid #a6ceca !important;
+}
+
+.q-text {
+    color: #0f172a !important;
+    line-height: 1.5 !important;
+}
+
+.skm-opt-btn,
+.likert6-btn {
+    background: #f2f6f5 !important;
+    border: 1px solid #c6d8d4 !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
+}
+
+.skm-opt-btn:hover,
+.likert6-btn:hover {
+    border-color: #0b6e75 !important;
+    background: #dceae7 !important;
+}
+
+.skm-opt-btn .opt-score {
+    background: #dceae7 !important;
+    color: #0b6e75 !important;
+}
+
+.skm-opt-btn.selected,
+.likert6-btn.selected-spkp,
+.likert6-btn.selected-spak {
+    border-color: #0b6e75 !important;
+    background: #dceae7 !important;
+    color: #08545a !important;
+    box-shadow: 0 2px 6px rgba(11, 110, 117, 0.14) !important;
+}
+
+.skm-opt-btn.selected .opt-score {
+    background: #0b6e75 !important;
+    color: #ffffff !important;
+}
+
+.likert6-btn.selected-spkp .l-num,
+.likert6-btn.selected-spkp .l-lbl,
+.likert6-btn.selected-spak .l-num,
+.likert6-btn.selected-spak .l-lbl {
+    color: #0b6e75 !important;
+}
+
+.survei-nav-footer {
+    border-top-color: #c6d8d4 !important;
+}
+
+.btn-survei-prev {
+    background: linear-gradient(135deg, #dceae7 0%, #eef5f3 100%) !important;
+    border: 1px solid #a6ceca !important;
+    color: #0b6e75 !important;
+    border-radius: 8px !important;
+}
+
+.btn-survei-next {
+    background: linear-gradient(135deg, #0b6e75 0%, #16858a 100%) !important;
+    border: 1px solid #0b6e75 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+    .survei-card {
+        padding: 18px 16px !important;
+    }
+}

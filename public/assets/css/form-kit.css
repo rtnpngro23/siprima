@@ -1,0 +1,444 @@
+/* ============================================================================
+   SIPRIMA Form Kit
+   ----------------------------------------------------------------------------
+   Tampilan kartu per kolom isian + tema warna per pintu layanan.
+
+   Cara pakai pada satu halaman form:
+     1. <body class="tema-form tema-line">   (ganti tema-line sesuai pintu)
+     2. <link rel="stylesheet" href="../assets/css/form-kit.css"> sebagai
+        link TERAKHIR di <head>, setelah CSS halaman.
+
+   Seluruh aturan di sini discope ke .tema-form, jadi halaman yang belum
+   memakai kelas itu sama sekali tidak terpengaruh. CSS lama per halaman
+   (34 file) sengaja tidak disentuh; berkas ini menang karena dimuat terakhir
+   dan setiap selector memakai dua kelas.
+   ========================================================================== */
+
+/* --- Token dasar (warna netral, sama di semua pintu) --------------------- */
+.tema-form {
+  --form-border: #e2e8f0;
+  --form-border-strong: #cbd5e1;
+  --form-surface: #ffffff;
+  --form-surface-mati: #f8fafc;
+  --form-label: #1f2937;
+  --form-hint: #475569;
+}
+
+/* --- Palet per pintu, diambil dari logo masing-masing -------------------- */
+
+/* LINE — pemohon umum (assets/line.png, merah terang) */
+.tema-line {
+  --form-primary: #ff2d35;
+  --form-primary-hover: #c40000;
+  --form-panel: #fff5f5;
+  --form-soft: #ffe4e6;
+  --form-accent: #c40000;
+  --form-focus-ring: rgba(255, 45, 53, .20);
+}
+
+/* ADD — petugas desa. Memakai ulang token yang sudah ada di
+   user/css/petugas_desa_shell.css supaya warnanya tidak bercabang dua. */
+.tema-add {
+  --form-primary: var(--add-primary, #176b4d);
+  --form-primary-hover: var(--add-primary-dark, #123d31);
+  --form-panel: var(--add-primary-soft, #ecfdf3);
+  --form-soft: #d1fae5;
+  --form-accent: var(--add-lime, #72dc78);
+  --form-focus-ring: rgba(23, 107, 77, .20);
+}
+
+/* RS — ST SEHATI (navy yang sudah jadi warna utama RS + merah dari logo) */
+.tema-rs {
+  --form-primary: #2c5282;
+  --form-primary-hover: #1a365d;
+  --form-panel: #f3f8fd;
+  --form-soft: #dbeafe;
+  --form-accent: #e74c3c;
+  --form-focus-ring: rgba(44, 82, 130, .20);
+}
+
+/* AHLAK — Puskesmas (assets/ahlak.png, mint) */
+.tema-ahlak {
+  --form-primary: #0d9488;
+  --form-primary-hover: #0f766e;
+  --form-panel: #f2fdf9;
+  --form-soft: #ccfbf1;
+  --form-accent: #10b981;
+  --form-focus-ring: rgba(13, 148, 136, .20);
+}
+
+/* KUA — PASUTRI (assets/PASUTRI.png, hijau gelap + kuning).
+   Disiapkan sekarang, dipakai saat modul Kartu Keluarga digulirkan. */
+.tema-kua {
+  --form-primary: #2b4a3f;
+  --form-primary-hover: #1d332c;
+  --form-panel: #f4f8f6;
+  --form-soft: #dcebe3;
+  --form-accent: #ffe000;
+  --form-focus-ring: rgba(43, 74, 63, .22);
+}
+
+/* --- Panel form ----------------------------------------------------------
+   Panel diberi nuansa tema sementara kartu kolom tetap putih, supaya batas
+   tiap kolom terlihat tegas tanpa harus mewarnai 20-an kartu sekaligus. */
+.tema-form .form-card,
+.tema-form .form-container {
+  background: var(--form-panel);
+  border: 1px solid var(--form-border);
+  border-radius: 16px;
+}
+
+/* --- Kartu per kolom ----------------------------------------------------- */
+.tema-form .form-grid-2 {
+  gap: 14px;
+}
+
+/* Selector ketiga menangkap kolom yang berdiri sendiri di luar .form-grid-2
+   (mis. blok Keterangan) tanpa perlu menandai HTML-nya satu per satu.
+   Peramban tanpa :has() hanya melewatkannya — kolomnya tampil seperti semula. */
+.tema-form .form-grid-2 > div,
+.tema-form .f-field,
+.tema-form form div:not([class]):has(> .field-label) {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 16px;
+  border: 1px solid var(--form-border);
+  border-left: 4px solid var(--form-primary);
+  border-radius: 12px;
+  background: var(--form-surface);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+
+.tema-form .f-field {
+  margin-bottom: 14px;
+}
+
+/* Sel yang tidak berisi kontrol (pembungkus kosong atau cabang kondisional)
+   tidak perlu tampil sebagai kartu. Peramban lama tanpa :has() hanya
+   mengabaikan aturan ini — kartunya tetap muncul, tidak rusak. */
+.tema-form .form-grid-2 > div:not(:has(> .input, > .select, > textarea)) {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* Kolom yang hanya menampilkan data (readonly) dibuat lebih redup supaya
+   perhatian jatuh ke kolom yang benar-benar harus diisi. */
+.tema-form .form-grid-2 > div:has(> .input[readonly]),
+.tema-form .form-grid-2 > div:has(> .input.bg-gray-100),
+.tema-form .form-grid-2 > div:has(> .locked-field) {
+  border-left-color: var(--form-border-strong);
+  background: var(--form-surface-mati);
+}
+
+/* --- Urutan tampil: judul -> instruksi -> kotak isian --------------------
+   Baseline order:4 WAJIB ada lebih dulu. Tanpa itu, setiap anak yang tidak
+   punya kelas (order:0 bawaan flexbox) akan melompat ke atas judul. */
+.tema-form .form-grid-2 > div > *,
+.tema-form .f-field > *,
+.tema-form form div:not([class]):has(> .field-label) > * {
+  order: 4;
+}
+
+.tema-form .form-grid-2 > div > .field-label,
+.tema-form .f-field > .field-label,
+.tema-form form div:not([class]):has(> .field-label) > .field-label {
+  order: 1;
+}
+
+.tema-form .form-grid-2 > div > .helper,
+.tema-form .f-field > .helper,
+.tema-form form div:not([class]):has(> .field-label) > .helper {
+  order: 2;
+}
+
+.tema-form .form-grid-2 > div > .input,
+.tema-form .form-grid-2 > div > .select,
+.tema-form .form-grid-2 > div > textarea,
+.tema-form .f-field > .input,
+.tema-form .f-field > .select,
+.tema-form .f-field > textarea,
+.tema-form form div:not([class]):has(> .field-label) > .input,
+.tema-form form div:not([class]):has(> .field-label) > .select,
+.tema-form form div:not([class]):has(> .field-label) > textarea {
+  order: 3;
+}
+
+/* --- Judul kolom --------------------------------------------------------- */
+.tema-form .field-label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--form-label);
+}
+
+/* --- Instruksi pengisian (tampil tepat di bawah judul) ------------------- */
+.tema-form .form-grid-2 > div > .helper,
+.tema-form .f-field > .helper,
+.tema-form form div:not([class]):has(> .field-label) > .helper {
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--form-soft);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--form-hint);
+}
+
+/* --- Kotak isian --------------------------------------------------------- */
+.tema-form .input,
+.tema-form .select,
+.tema-form textarea.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--form-border-strong);
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  color: #111827;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.tema-form .input:focus,
+.tema-form .select:focus,
+.tema-form textarea.input:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 3px var(--form-focus-ring);
+}
+
+/* Kolom terkunci tetap abu-abu. Ditulis eksplisit karena .input.bg-gray-100
+   pada CSS lama punya bobot yang sama dengan .tema-form .input. */
+.tema-form .input.bg-gray-100,
+.tema-form .select.bg-gray-100,
+.tema-form .input[readonly],
+.tema-form .select[disabled],
+.tema-form .locked-field,
+.tema-form .locked-select {
+  background: #f1f5f9;
+  border-color: var(--form-border);
+  color: #64748b;
+  cursor: default;
+}
+
+/* --- Blok unggah dokumen ------------------------------------------------- */
+
+/* Kotak "Dokumen Wajib" / "Dokumen Opsional". Menggantikan gaya inline biru
+   dan hijau yang sebelumnya dipatok di HTML sehingga tidak bisa ikut tema. */
+.tema-form .f-doc-group {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid var(--form-border);
+  border-left: 4px solid var(--form-primary);
+  border-radius: 12px;
+  background: var(--form-panel);
+}
+
+.tema-form .f-doc-group--opsional {
+  border-left-color: var(--form-border-strong);
+}
+
+.tema-form .f-doc-group__judul {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--form-label);
+}
+
+.tema-form .f-doc-group__catatan {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--form-hint);
+}
+
+.tema-form .file-input-group {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--form-border);
+  border-left: 4px solid var(--form-primary);
+  border-radius: 12px;
+  background: var(--form-surface);
+}
+
+.tema-form .file-type-select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--form-border-strong);
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--form-label);
+}
+
+.tema-form .file-label {
+  background: var(--form-primary);
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.tema-form .file-label:hover {
+  background: var(--form-primary-hover);
+}
+
+.tema-form .file-size-warning {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--form-hint);
+}
+
+/* --- Tombol -------------------------------------------------------------- */
+.tema-form .btn-primary {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--form-primary);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease;
+}
+
+.tema-form .btn-primary:hover {
+  background: var(--form-primary-hover);
+}
+
+.tema-form .btn-secondary {
+  padding: 10px 20px;
+  border: 2px solid var(--form-primary);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--form-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.tema-form .btn-secondary:hover {
+  background: var(--form-primary);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Dialek kedua: .form-group / .form-control
+   --------------------------------------------------------------------------
+   Halaman edit KK, pindah alamat, pindah masuk, lapor peristiwa, KUA, dan
+   profil memakai struktur berbeda: <div class="form-group"><label>...</label>
+   <input class="form-control"></div>, dengan petunjuk berupa <small>.
+   Aturannya dibuat terpisah agar kedua dialek tampil sama.
+   ========================================================================== */
+
+.tema-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  padding: 14px 14px 16px;
+  border: 1px solid var(--form-border);
+  border-left: 4px solid var(--form-primary);
+  border-radius: 12px;
+  background: var(--form-surface);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+
+/* Grup yang tidak berisi kontrol tidak perlu tampil sebagai kartu. */
+.tema-form .form-group:not(:has(.form-control, input, select, textarea)) {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.tema-form .form-group > * {
+  order: 4;
+}
+
+.tema-form .form-group > label {
+  order: 1;
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--form-label);
+}
+
+.tema-form .form-group > small,
+.tema-form .form-group > .helper {
+  order: 2;
+  margin: 0 0 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--form-soft);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tema-form .form-group > .form-control,
+.tema-form .form-group > input,
+.tema-form .form-group > select,
+.tema-form .form-group > textarea {
+  order: 3;
+}
+
+.tema-form .form-control {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--form-border-strong);
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 15px;
+  font-family: inherit;
+  color: #111827;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.tema-form .form-control:focus {
+  outline: none;
+  border-color: var(--form-primary);
+  box-shadow: 0 0 0 3px var(--form-focus-ring);
+}
+
+.tema-form .form-control.readonly,
+.tema-form .form-control.bg-gray-100,
+.tema-form .form-control[readonly],
+.tema-form .form-control[disabled] {
+  background: #f1f5f9;
+  border-color: var(--form-border);
+  color: #64748b;
+  cursor: default;
+}
+
+.tema-form .form-group:has(> .form-control[readonly]),
+.tema-form .form-group:has(> .form-control.readonly) {
+  border-left-color: var(--form-border-strong);
+  background: var(--form-surface-mati);
+}
+
+/* --- Layar kecil --------------------------------------------------------- */
+@media (max-width: 480px) {
+  /* 16px mencegah iOS memperbesar halaman sendiri saat kolom difokuskan. */
+  .tema-form .input,
+  .tema-form .select,
+  .tema-form textarea.input {
+    font-size: 16px;
+  }
+
+  .tema-form .form-control {
+    font-size: 16px;
+  }
+
+  .tema-form .form-grid-2 > div,
+  .tema-form .f-field,
+  .tema-form .form-group,
+  .tema-form .file-input-group {
+    padding: 12px;
+  }
+}

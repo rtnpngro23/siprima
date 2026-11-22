@@ -1,0 +1,9 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+# Preserve the existing standalone publications endpoint.
+RewriteRule ^whistleblowing-publications\.php$ - [END]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,END]

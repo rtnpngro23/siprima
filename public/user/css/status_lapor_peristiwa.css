@@ -1,0 +1,243 @@
+/* Additional styles for peristiwa */
+    .jenis-badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        margin-left: 5px;
+    }
+    
+    .jenis-lahir {
+        background: #d1fae5;
+        color: #065f46;
+        border: 1px solid #065f46;
+    }
+    
+    .jenis-mati {
+        background: #f3e8ff;
+        color: #6b21a8;
+        border: 1px solid #6b21a8;
+    }
+    
+    .jenis-rentan {
+        background: #fef3c7;
+        color: #92400e;
+        border: 1px solid #92400e;
+    }
+    
+    .detail-subject {
+        font-size: 18px;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .detail-parents {
+        background: #f0f9ff;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #dbeafe;
+        margin-top: 10px;
+    }
+    
+    .detail-parents h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #1e40af;
+        font-size: 16px;
+    }
+    
+    .detail-parents p {
+        margin: 5px 0;
+        color: #374151;
+    }
+    
+    /* Filter section styles */
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 200px;
+    }
+    
+    .filter-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+    }
+    
+    .filter-group select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        background: #f8f9fa;
+        transition: border-color 0.3s ease;
+    }
+    
+    .filter-group select:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+    
+    .btn-filter {
+        background: #3498db;
+        color: white;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        margin-top: 23px;
+    }
+    
+    .btn-filter:hover {
+        background: #2980b9;
+    }
+    
+    .btn-reset {
+        background: #95a5a6;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        margin-top: 23px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .btn-reset:hover {
+        background: #7f8c8d;
+    }
+    
+    .filters {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .document-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .document-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: white;
+        border-radius: 6px;
+        border: 1px solid #e5e7eb;
+    }
+    
+    .doc-type {
+        font-weight: 600;
+        color: #374151;
+        min-width: 120px;
+        font-size: 14px;
+    }
+    
+    .doc-link {
+        color: #3b82f6;
+        text-decoration: none;
+        font-size: 14px;
+        flex: 1;
+    }
+    
+    .doc-link:hover {
+        text-decoration: underline;
+        color: #2563eb;
+    }
+    
+    .doc-missing {
+        color: #6b7280;
+        font-style: italic;
+        font-size: 14px;
+        flex: 1;
+    }
+    
+    .alasan-box {
+        background: #fee2e2;
+        border: 1px solid #fecaca;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        color: #991b1b;
+    }
+    
+    .keterangan-box {
+        background: #f0f9ff;
+        border: 1px solid #dbeafe;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        color: #1e40af;
+    }
+    
+    .edit-notice {
+        background: #fffbeb;
+        border: 1px solid #fcd34d;
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 20px;
+        color: #92400e;
+    }
+    
+    .edit-notice h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #92400e;
+        font-size: 16px;
+    }
+    
+    .edit-notice p {
+        margin-bottom: 15px;
+        color: #92400e;
+        line-height: 1.5;
+    }
+    
+    .btn-edit-modal {
+        background: #f59e0b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    
+    .btn-edit-modal:hover {
+        background: #d97706;
+    }
+    
+    /* Tombol edit */
+    .btn-edit {
+        background: #f59e0b;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    
+    .btn-edit:hover {
+        background: #d97706;
+    }

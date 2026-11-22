@@ -1,0 +1,18 @@
+.puskesmas-banner,.stats-card,.card,.info-card{background:#fff;border-radius:12px;box-shadow:0 3px 14px rgba(31,45,61,.08)}
+.puskesmas-banner{padding:18px 22px;margin-bottom:20px;border-left:5px solid #18864b}
+.puskesmas-banner h3{margin:0 0 8px;color:#146c3d}.puskesmas-banner p{margin:4px 0;color:#536273}
+.stats-card{width:220px;padding:18px;margin-bottom:20px;text-align:center;border-top:4px solid #18864b}
+.stats-card i{font-size:28px;color:#18864b}.stats-card h3{margin:7px 0 2px;font-size:26px}.stats-card p{margin:0;color:#667586}
+.search-box{position:relative;margin-bottom:18px}.search-box i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#8492a6}
+.search-box input{width:100%;box-sizing:border-box;padding:12px 15px 12px 42px;border:1px solid #dce3ea;border-radius:9px;font:inherit}
+.search-box input:focus{outline:none;border-color:#18864b;box-shadow:0 0 0 3px rgba(24,134,75,.12)}
+.card{overflow:hidden}.card-header,.info-card-header{padding:15px 20px;background:#18864b;color:#fff;font-weight:700}.card-body{padding:8px 20px}
+.file-item{display:flex;align-items:center;gap:15px;padding:16px 4px;border-bottom:1px solid #edf0f3}.file-item:last-child{border-bottom:0}
+.file-icon{width:46px;text-align:center;font-size:30px}.file-info{flex:1;min-width:0}.file-name{font-weight:700;color:#273444;overflow-wrap:anywhere}
+.file-meta{display:flex;align-items:center;gap:10px;margin-top:7px;color:#778493;font-size:13px}.file-badge{padding:3px 8px;border-radius:10px;color:#fff;font-size:10px;font-weight:700}
+.badge-pdf{background:#d64545}.badge-doc{background:#3273dc}.badge-xls{background:#18864b}.badge-img{background:#8e57b5}.badge-health{background:#d86b21}.badge-form,.badge-secondary{background:#657786}
+.file-actions{display:flex;gap:8px}.btn-preview,.btn-download{padding:8px 12px;border-radius:7px;color:#fff;text-decoration:none;font-size:13px;font-weight:600}.btn-preview{background:#50708f}.btn-download{background:#18864b}
+.btn-preview:hover,.btn-download:hover{filter:brightness(.92)}.file-unavailable{color:#b33;font-size:13px}.empty-state{text-align:center;padding:44px 15px;color:#758294}.empty-state h4{margin-bottom:6px}
+.info-card{margin-top:20px;overflow:hidden}.info-card-body{padding:16px 20px}.info-card-body p{margin-top:0}.info-card-body li{margin:7px 0}.footer{text-align:center;padding:25px 10px;color:#718096;font-size:13px}
+@media(max-width:768px){.stats-card{width:auto}.file-item{align-items:flex-start;flex-wrap:wrap}.file-info{width:calc(100% - 65px)}.file-actions{width:100%;padding-left:61px}.btn-preview,.btn-download{flex:1;text-align:center}}
+@media(max-width:480px){.file-actions{padding-left:0}.card-body{padding:7px 14px}.puskesmas-banner{padding:16px}.file-meta{flex-wrap:wrap}}

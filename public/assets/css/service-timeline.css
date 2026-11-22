@@ -1,0 +1,45 @@
+.service-timeline-visual {
+    margin: 18px 0;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #fff;
+    color: #334155;
+    text-align: left;
+    min-width: 0;
+}
+.service-timeline-visual h3 { margin: 0 0 16px; font-size: 18px; font-weight: 700; color: #1e293b; }
+.service-timeline-visual .service-timeline-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0 0 22px; padding: 14px; background: #f8fafc; border-radius: 8px; }
+.service-timeline-summary dt { margin: 0 0 6px; font-size: 12px; font-weight: 500; color: #64748b; }
+.service-timeline-summary dd { margin: 0; font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.service-timeline-visual .service-timeline-events { list-style: none; padding: 0; margin: 0; }
+.service-timeline-event { --event-color: #64748b; position: relative; display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; padding: 0 0 18px; }
+.service-timeline-event:not(:last-child)::before { content: ''; position: absolute; left: 8px; top: 16px; bottom: -9px; width: 2px; background: #dbeafe; }
+.service-timeline-event.is-diajukan { --event-color: #a16207; }
+.service-timeline-event.is-diproses { --event-color: #2563eb; }
+.service-timeline-event.is-selesai { --event-color: #15803d; }
+.service-timeline-event.is-ditolak { --event-color: #dc2626; }
+.service-timeline-dot { position: relative; z-index: 1; width: 16px; height: 16px; margin-top: 10px; border-radius: 50%; background: var(--event-color); border: 3px solid #fff; box-sizing: border-box; box-shadow: 0 0 0 1px var(--event-color); }
+.is-progress .service-timeline-dot { width: 10px; height: 10px; margin: 13px 0 0 3px; border: 2px solid #fff; }
+.service-timeline-event-body { padding: 8px 12px 12px; min-width: 0; border-radius: 8px; }
+.is-latest .service-timeline-event-body { background: #f8fafc; box-shadow: inset 3px 0 0 var(--event-color); }
+.is-latest .service-timeline-dot { outline: 3px solid #e2e8f0; outline-offset: 2px; }
+.service-timeline-event-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.service-timeline-visual .service-timeline-badge { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; font-size: 12px; line-height: 1.5; font-weight: 700; background: #e2e8f0; color: #334155; }
+.service-timeline-visual .service-timeline-badge.is-diajukan { background: #fef3c7; color: #854d0e; }
+.service-timeline-visual .service-timeline-badge.is-diproses { background: #dbeafe; color: #1d4ed8; }
+.service-timeline-visual .service-timeline-badge.is-selesai { background: #dcfce7; color: #166534; }
+.service-timeline-visual .service-timeline-badge.is-ditolak { background: #fee2e2; color: #991b1b; }
+.service-timeline-latest { font-size: 11px; font-weight: 600; color: #475569; }
+.service-timeline-event-type { margin-top: 7px; font-size: 13px; font-weight: 600; }
+.service-timeline-time { margin-top: 3px; font-size: 12px; color: #64748b; }
+.service-timeline-actor { margin-top: 5px; font-size: 12px; color: #475569; overflow-wrap: anywhere; }
+.service-timeline-visual .service-timeline-note { margin: 9px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.6; color: #334155; }
+.service-timeline-durations { padding-top: 10px; border-top: 1px solid #e2e8f0; font-size: 13px; }
+.service-timeline-durations p { margin: 6px 0; }
+.service-timeline-visual > small { display: block; margin-top: 10px; line-height: 1.5; font-size: 12px; color: #64748b; }
+@media (max-width: 640px) {
+    .service-timeline-visual { padding: 14px; }
+    .service-timeline-visual .service-timeline-summary { grid-template-columns: 1fr; gap: 12px; }
+    .service-timeline-event { gap: 8px; }
+}

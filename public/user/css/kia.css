@@ -1,0 +1,646 @@
+/* Styling for Form Pengajuan KIA SIPRIMA */
+
+.kia-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 10px 0 60px;
+}
+
+/* Stepper Component (1 Data -> 2 Dokumen -> 3 Selesai) */
+.kia-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 580px;
+  margin: 0 auto 28px;
+  padding: 0 16px;
+}
+
+.kia-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: default;
+}
+
+.kia-step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  background: #f1f5f9;
+  color: #94a3b8;
+  border: 2px solid #e2e8f0;
+}
+
+.kia-step.active .kia-step-circle {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.kia-step.completed .kia-step-circle {
+  background: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+.kia-step-label {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: color 0.25s ease;
+}
+
+.kia-step.active .kia-step-label {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.kia-step.completed .kia-step-label {
+  color: #16a34a;
+}
+
+.kia-step-line {
+  flex: 1;
+  height: 3px;
+  background: #e2e8f0;
+  margin: 0 12px;
+  position: relative;
+  top: -12px;
+  z-index: 1;
+  transition: background 0.25s ease;
+}
+
+.kia-step-line.active {
+  background: #2563eb;
+}
+
+/* Form Card */
+.kia-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  margin-bottom: 24px;
+}
+
+.kia-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Fields & Inputs */
+.kia-form-group {
+  margin-bottom: 18px;
+}
+
+.kia-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.kia-label .req {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.kia-input, .kia-select, .kia-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #1e293b;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.kia-input:focus, .kia-select:focus, .kia-textarea:focus {
+  background: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.kia-input[readonly], .kia-input:disabled {
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+/* Child block */
+.kia-anak-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.kia-anak-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.kia-anak-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-remove-anak {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-anak:hover {
+  background: #fecaca;
+}
+
+/* Tombol Hapus Data Anak Full-Width */
+.btn-hapus-anak-block {
+  width: 100%;
+  background: #e53e3e;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-hapus-anak-block:hover {
+  background: #c53030;
+}
+
+.btn-hapus-anak-block:active {
+  transform: scale(0.99);
+}
+
+.kia-anak-title-blue {
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+/* Button Tambah Anak */
+.btn-tambah-anak {
+  width: 100%;
+  background: #38a169;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-tambah-anak:hover {
+  background: #2f855a;
+}
+
+.btn-tambah-anak:active {
+  transform: scale(0.99);
+}
+
+/* Document Upload Card (Figma Style) */
+.kia-doc-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kia-doc-card:hover {
+  border-color: #cbd5e1;
+}
+
+.kia-doc-card.has-file {
+  border-color: #93c5fd;
+  background: #f0f7ff;
+}
+
+.kia-doc-card.has-error {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.kia-doc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.kia-doc-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-pilih-file {
+  background: #2563eb;
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-pilih-file:hover {
+  background: #1d4ed8;
+}
+
+.kia-file-status {
+  font-size: 13px;
+  color: #64748b;
+  word-break: break-all;
+}
+
+.kia-file-status.selected {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.kia-file-size {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.kia-doc-help {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.kia-doc-help.info {
+  color: #475569;
+}
+
+.kia-doc-preview {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.kia-doc-preview img {
+  width: 56px;
+  height: 70px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Optional document container */
+.kia-opsional-box {
+  background: #f4f7ee;
+  border: 1px solid #c8ddb8;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.btn-tambah-opsional {
+  width: 100%;
+  background: #8e99a8;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  transition: background 0.2s ease;
+}
+
+.btn-tambah-opsional:hover {
+  background: #718096;
+}
+
+/* Actions Footer */
+.kia-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.btn-kembali {
+  background: #8e99a8;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-kembali:hover {
+  background: #718096;
+}
+
+.btn-submit-kia {
+  background: #2563eb;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit-kia:hover {
+  background: #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-submit-kia:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .kia-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+  .kia-stepper {
+    margin-bottom: 20px;
+  }
+  .kia-step-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+  .kia-step-label {
+    font-size: 12px;
+  }
+  .kia-actions {
+    flex-direction: column-reverse;
+  }
+  .btn-kembali, .btn-submit-kia {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Modal Crop Pasfoto Anak (Tepat 480 × 600 px) */
+.kia-crop-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 10000;
+}
+
+.kia-crop-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 540px;
+  width: 100%;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.kia-crop-header h3 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.kia-crop-header p {
+  margin: 0 0 16px;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.kia-crop-workspace {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  margin: 0 auto 16px;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+  touch-action: none;
+}
+
+.kia-crop-workspace:active {
+  cursor: grabbing;
+}
+
+#cropCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.kia-crop-overlay-guide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kia-crop-guide-oval {
+  width: 82%;
+  height: 86%;
+  border: 2px dashed rgba(255, 255, 255, 0.85);
+  border-radius: 4px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+}
+
+.kia-crop-controls {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.kia-crop-control-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.kia-crop-control-group:last-child {
+  margin-bottom: 0;
+}
+
+.kia-crop-control-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.kia-crop-control-group input[type="range"] {
+  flex: 1;
+  accent-color: #2563eb;
+}
+
+.btn-crop-move {
+  background: #e2e8f0;
+  color: #334155;
+  border: 0;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-crop-move:hover {
+  background: #cbd5e1;
+}
+
+.kia-crop-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-crop-cancel {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-crop-confirm {
+  background: #16a34a;
+  color: #ffffff;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.btn-crop-confirm:hover {
+  background: #15803d;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}

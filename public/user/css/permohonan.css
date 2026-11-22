@@ -1,0 +1,4 @@
+@import url('global.css');
+
+/* Small permohonan-specific rules extracted from inline attributes */
+#formKK { display: none; margin-top: 15px; }

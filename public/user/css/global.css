@@ -1,0 +1,23 @@
+/* global.css — shared styles for all pages in user/
+   Put site-wide overrides, variables, and utilities here.
+   This file is imported by the shim files in `user/` so no PHP changes are needed.
+*/
+:root {
+  --primary: #2563eb;
+  --bg: #f8fafc;
+  --muted: #64748b;
+}
+
+/* Basic reset and typography */
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;background:var(--bg);color:#0f172a;}
+a{color:var(--primary);text-decoration:none}
+
+/* Utility helpers */
+.hidden{display:none!important}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px}
+
+/* Small components used across multiple pages */
+.modal-overlay{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:flex;justify-content:center;align-items:center}
+
+/* You can add more global rules here */

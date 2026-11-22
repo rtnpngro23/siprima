@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update domain sesuai production URL.
+Sitemap: https://siprima.gorontalokab.go.id/sitemap.xml

@@ -1,0 +1,3627 @@
+{
+  "version": 1,
+  "updated_at": "2026-09-09",
+  "description": "Kumpulan awal nama dengan ringkasan arti dan rujukan yang telah dicocokkan; bukan pemeriksaan ahli bahasa.",
+  "regions": [
+    "Arab",
+    "Eropa",
+    "Indonesia/Nusantara",
+    "Sanskerta"
+  ],
+  "pending_regions": [],
+  "themes": {
+    "kebaikan": "Kebaikan",
+    "kasih": "Kasih sayang",
+    "kedamaian": "Kedamaian",
+    "bahagia": "Kebahagiaan",
+    "keberanian": "Keberanian",
+    "bijaksana": "Kebijaksanaan",
+    "cahaya": "Cahaya"
+  },
+  "names": [
+    {
+      "id": "ahmad",
+      "n": "Ahmad",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terpuji.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=29",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 29"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "amin",
+      "n": "Amin",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Jujur; dapat dipercaya.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=29",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 29"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "hasan",
+      "n": "Hasan",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Baik; tampan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://www.islamic-relief.org.za/wp-content/uploads/2022/06/MuslimBoysNames.pdf#page=72",
+        "title": "Muslim Boys Names — Islamic Relief South Africa, halaman PDF 72"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "karim",
+      "n": "Karim",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Mulia; murah hati.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/Karim",
+        "title": "Wiktionary contributors — Karim"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian. Ringkasan entri Wiktionary (CC BY-SA 4.0)."
+    },
+    {
+      "id": "salim",
+      "n": "Salim",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Selamat.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=97",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 97"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "farhan",
+      "n": "Farhan",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Gembira.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://www.islamic-relief.org.za/wp-content/uploads/2022/06/MuslimBoysNames.pdf#page=58",
+        "title": "Muslim Boys Names — Islamic Relief South Africa, halaman PDF 58"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "amal",
+      "n": "Amal",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Harapan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "amira",
+      "n": "Amira",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Pemimpin perempuan; putri.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "anisa",
+      "n": "Anisa",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Ramah.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "arifa",
+      "n": "Arifa",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Berpengetahuan.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "aisyah",
+      "n": "Aisyah",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Hidup; sejahtera.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=121",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 121"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "afifa",
+      "n": "Afifa",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Menjaga kesucian diri.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=122",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 122"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "felix",
+      "n": "Felix",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Bahagia; beruntung.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Felix",
+        "title": "Dictionary of Medieval Names from European Sources — Felix"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "victor",
+      "n": "Victor",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Pemenang.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Victor",
+        "title": "Dictionary of Medieval Names from European Sources — Victor"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "clement",
+      "n": "Clement",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Penyayang; lembut.",
+      "themes": [
+        "kasih",
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Clement",
+        "title": "Dictionary of Medieval Names from European Sources — Clement"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "leo",
+      "n": "Leo",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Latin / Yunani",
+      "m": "Singa.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Leo",
+        "title": "Dictionary of Medieval Names from European Sources — Leo"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian. Tema keberanian adalah harapan yang dikaitkan dengan singa, bukan arti harfiah."
+    },
+    {
+      "id": "hugh",
+      "n": "Hugh",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Pikiran; hati.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Hugh",
+        "title": "Dictionary of Medieval Names from European Sources — Hugh"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "conrad",
+      "n": "Conrad",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Unsur kata berani dan nasihat.",
+      "themes": [
+        "keberanian",
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Conrad",
+        "title": "Dictionary of Medieval Names from European Sources — Conrad"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "clara",
+      "n": "Clara",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Jernih; terang.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Clara",
+        "title": "Dictionary of Medieval Names from European Sources — Clara"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "sophia",
+      "n": "Sophia",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Kebijaksanaan.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Sophia",
+        "title": "Dictionary of Medieval Names from European Sources — Sophia"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "beatrice",
+      "n": "Beatrice",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Yang membawa kebahagiaan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Beatrice",
+        "title": "Dictionary of Medieval Names from European Sources — Beatrice"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "agatha",
+      "n": "Agatha",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Baik.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Agatha",
+        "title": "Dictionary of Medieval Names from European Sources — Agatha"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "lucy",
+      "n": "Lucy",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Cahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Lucy",
+        "title": "Dictionary of Medieval Names from European Sources — Lucy"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "constance",
+      "n": "Constance",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Keteguhan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-08",
+      "source": {
+        "url": "https://dmnes.org/name/Constance",
+        "title": "Dictionary of Medieval Names from European Sources — Constance"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah pengelompokan untuk membantu pencarian."
+    },
+    {
+      "id": "bagus",
+      "n": "Bagus",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bagus; tampan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/bagus",
+        "title": "Kamus Bahasa Jawa–Indonesia — bagus"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "bagas",
+      "n": "Bagas",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Sehat.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/bagas",
+        "title": "Kamus Bahasa Jawa–Indonesia — bagas"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "tegar",
+      "n": "Tegar",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Tabah; teguh.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/tegar#Indonesian",
+        "title": "Wiktionary contributors — tegar (Indonesia)"
+      },
+      "note": "Menggunakan makna positif tabah; kata ini juga memiliki makna lain."
+    },
+    {
+      "id": "elang",
+      "n": "Elang",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Burung elang.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/elang#Indonesian",
+        "title": "Wiktionary contributors — elang (Indonesia)"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "indah",
+      "n": "Indah",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Indah; elok.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/indah#Indonesian",
+        "title": "Wiktionary contributors — indah (Indonesia)"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "cinta",
+      "n": "Cinta",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia (serapan Sanskerta)",
+      "m": "Kasih sayang.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/cinta#Indonesian",
+        "title": "Wiktionary contributors — cinta (Indonesia)"
+      },
+      "note": "Arti mengikuti pemakaian bahasa Indonesia, bukan arti kata asal cintā dalam Sanskerta."
+    },
+    {
+      "id": "bunga",
+      "n": "Bunga",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Bunga.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/bunga#Indonesian",
+        "title": "Wiktionary contributors — bunga (Indonesia)"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "endah",
+      "n": "Endah",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Indah; bagus.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/%C3%A9ndah",
+        "title": "Kamus Bahasa Jawa–Indonesia — éndah"
+      },
+      "note": "Ejaan Endah disederhanakan dari éndah (makna indah/bagus)."
+    },
+    {
+      "id": "arka",
+      "n": "Arka",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Matahari.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/arka",
+        "title": "SanskritDictionary.org — arka"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "arya",
+      "n": "Arya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Mulia; terhormat.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/arya",
+        "title": "SanskritDictionary.org — arya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "jaya",
+      "n": "Jaya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kemenangan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/jaya",
+        "title": "SanskritDictionary.org — jaya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "surya",
+      "n": "Surya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Matahari.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/surya",
+        "title": "SanskritDictionary.org — surya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "nirmala",
+      "n": "Nirmala",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bersih; murni.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/nirmala",
+        "title": "SanskritDictionary.org — nirmala"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "ratna",
+      "n": "Ratna",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Permata.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/ratna",
+        "title": "SanskritDictionary.org — ratna"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "padma",
+      "n": "Padma",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bunga teratai.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/padma",
+        "title": "SanskritDictionary.org — padma"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "gita",
+      "n": "Gita",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Nyanyian.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/gita",
+        "title": "SanskritDictionary.org — gita"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema adalah asosiasi untuk pencarian, bukan terjemahan tambahan. Jenis kelamin adalah pengelompokan saran nama."
+    },
+    {
+      "id": "albert",
+      "n": "Albert",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Mulia dan terang.",
+      "themes": [
+        "kebaikan",
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Albert",
+        "title": "Dictionary of Medieval Names from European Sources — Albert"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "alexander",
+      "n": "Alexander",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Pembela manusia.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Alexander",
+        "title": "Dictionary of Medieval Names from European Sources — Alexander"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "alfred",
+      "n": "Alfred",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Inggris Kuno",
+      "m": "Nasihat peri.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Alfred",
+        "title": "Dictionary of Medieval Names from European Sources — Alfred"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "andrew",
+      "n": "Andrew",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Laki-laki; jantan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Andrew",
+        "title": "Dictionary of Medieval Names from European Sources — Andrew"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "henry",
+      "n": "Henry",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Pemimpin rumah.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Henry",
+        "title": "Dictionary of Medieval Names from European Sources — Henry"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "benedict",
+      "n": "Benedict",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Diberkati.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Benedict",
+        "title": "Dictionary of Medieval Names from European Sources — Benedict"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "bernard",
+      "n": "Bernard",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Kuat seperti beruang.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Bernard",
+        "title": "Dictionary of Medieval Names from European Sources — Bernard"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "charles",
+      "n": "Charles",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Laki-laki merdeka.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Charles",
+        "title": "Dictionary of Medieval Names from European Sources — Charles"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "edmund",
+      "n": "Edmund",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Inggris Kuno",
+      "m": "Pelindung kekayaan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Edmund",
+        "title": "Dictionary of Medieval Names from European Sources — Edmund"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "edward",
+      "n": "Edward",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Inggris Kuno",
+      "m": "Penjaga kekayaan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Edward",
+        "title": "Dictionary of Medieval Names from European Sources — Edward"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "ernest",
+      "n": "Ernest",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Bersungguh-sungguh.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Ernest",
+        "title": "Dictionary of Medieval Names from European Sources — Ernest"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "frederick",
+      "n": "Frederick",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Pemimpin yang damai.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Frederick",
+        "title": "Dictionary of Medieval Names from European Sources — Frederick"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "gilbert",
+      "n": "Gilbert",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Janji dan terang.",
+      "themes": [
+        "kebaikan",
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Gilbert",
+        "title": "Dictionary of Medieval Names from European Sources — Gilbert"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "godfrey",
+      "n": "Godfrey",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Tuhan dan kedamaian.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Godfrey",
+        "title": "Dictionary of Medieval Names from European Sources — Godfrey"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "nicholas",
+      "n": "Nicholas",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Kemenangan rakyat.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Nicholas",
+        "title": "Dictionary of Medieval Names from European Sources — Nicholas"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "philip",
+      "n": "Philip",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Pencinta kuda.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Philip",
+        "title": "Dictionary of Medieval Names from European Sources — Philip"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "raymond",
+      "n": "Raymond",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Nasihat dan perlindungan.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Raymond",
+        "title": "Dictionary of Medieval Names from European Sources — Raymond"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "robert",
+      "n": "Robert",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Ketenaran yang bersinar.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Robert",
+        "title": "Dictionary of Medieval Names from European Sources — Robert"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "william",
+      "n": "William",
+      "g": "L",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Tekad dan pelindung kepala.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/William",
+        "title": "Dictionary of Medieval Names from European Sources — William"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "agnes",
+      "n": "Agnes",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Murni; suci.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Agnes",
+        "title": "Dictionary of Medieval Names from European Sources — Agnes"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "alice",
+      "n": "Alice",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Kemuliaan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Alice",
+        "title": "Dictionary of Medieval Names from European Sources — Alice"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "amanda",
+      "n": "Amanda",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Layak dicintai.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Amanda",
+        "title": "Dictionary of Medieval Names from European Sources — Amanda"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "angela",
+      "n": "Angela",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Malaikat; pembawa pesan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Angela",
+        "title": "Dictionary of Medieval Names from European Sources — Angela"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "grace",
+      "n": "Grace",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Kebaikan; anugerah.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Grace",
+        "title": "Dictionary of Medieval Names from European Sources — Grace"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "benedicta",
+      "n": "Benedicta",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Diberkati.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Benedicta",
+        "title": "Dictionary of Medieval Names from European Sources — Benedicta"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "blanche",
+      "n": "Blanche",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Prancis Kuno",
+      "m": "Putih.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Blanche",
+        "title": "Dictionary of Medieval Names from European Sources — Blanche"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "dorothea",
+      "n": "Dorothea",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Pemberian Tuhan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Dorothy",
+        "title": "Dictionary of Medieval Names from European Sources — Dorothy"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk Dorothy/Dorothea."
+    },
+    {
+      "id": "hope",
+      "n": "Hope",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Inggris",
+      "m": "Harapan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/Hope#English",
+        "title": "Wiktionary contributors — Hope"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "felicia",
+      "n": "Felicia",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Bahagia; beruntung.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Felicia",
+        "title": "Dictionary of Medieval Names from European Sources — Felicia"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "flora",
+      "n": "Flora",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Bunga.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Flora",
+        "title": "Dictionary of Medieval Names from European Sources — Flora"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "irene",
+      "n": "Irene",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Kedamaian.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/Irene",
+        "title": "Wiktionary contributors — Irene"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "joanna",
+      "n": "Joanna",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Ibrani",
+      "m": "Dikaruniai Tuhan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Joan",
+        "title": "Dictionary of Medieval Names from European Sources — Joan"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk Joan/Joanna."
+    },
+    {
+      "id": "margaret",
+      "n": "Margaret",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Mutiara.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Margaret",
+        "title": "Dictionary of Medieval Names from European Sources — Margaret"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "emma",
+      "n": "Emma",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Jermanik",
+      "m": "Kuat.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Emma",
+        "title": "Dictionary of Medieval Names from European Sources — Emma"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "philippa",
+      "n": "Philippa",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Yunani",
+      "m": "Pencinta kuda.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/Philippa",
+        "title": "Wiktionary contributors — Philippa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "rose",
+      "n": "Rose",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Jermanik; dipengaruhi Latin",
+      "m": "Dikaitkan dengan bunga mawar dalam pemakaian modern.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Rose",
+        "title": "Dictionary of Medieval Names from European Sources — Rose"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Rujukan juga mencatat akar Jermanik yang berkaitan dengan ketenaran; makna mawar mengikuti pengaruh Latin pada bentuk kemudian."
+    },
+    {
+      "id": "serena",
+      "n": "Serena",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Jernih; cerah.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Serena",
+        "title": "Dictionary of Medieval Names from European Sources — Serena"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "victoria",
+      "n": "Victoria",
+      "g": "P",
+      "region": "Eropa",
+      "o": "Latin",
+      "m": "Kemenangan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://dmnes.org/name/Victoria",
+        "title": "Dictionary of Medieval Names from European Sources — Victoria"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "adi",
+      "n": "Adi",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bagus; indah.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/adi",
+        "title": "Kamus Bahasa Jawa–Indonesia — adi"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "agung",
+      "n": "Agung",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Besar; luhur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/agung",
+        "title": "Kamus Bahasa Jawa–Indonesia — agung"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "aji",
+      "n": "Aji",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Nilai; kehormatan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/aji",
+        "title": "Kamus Bahasa Jawa–Indonesia — aji"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "bakti",
+      "n": "Bakti",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Kesetiaan; penghormatan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/bakti",
+        "title": "Kamus Bahasa Jawa–Indonesia — bakti"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "budi",
+      "n": "Budi",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Pekerti; pikiran.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/budi",
+        "title": "Kamus Bahasa Jawa–Indonesia — budi"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "cahyo",
+      "n": "Cahyo",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Cahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/cahya",
+        "title": "Kamus Bahasa Jawa–Indonesia — cahya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk cahya. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "damar",
+      "n": "Damar",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Pelita; penerang.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/damar",
+        "title": "Kamus Bahasa Jawa–Indonesia — damar"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "dimas",
+      "n": "Dimas",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Sebutan untuk adik laki-laki.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/dhimas",
+        "title": "Kamus Bahasa Jawa–Indonesia — dhimas"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk dhimas. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "eko",
+      "n": "Eko",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Satu.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/eka",
+        "title": "Kamus Bahasa Jawa–Indonesia — eka"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk éka. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "fajar",
+      "n": "Fajar",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Fajar.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/fajar",
+        "title": "Kamus Bahasa Jawa–Indonesia — fajar"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "gilang",
+      "n": "Gilang",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bercahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/gilang",
+        "title": "Kamus Bahasa Jawa–Indonesia — gilang"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "guntur",
+      "n": "Guntur",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Halilintar.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/guntur",
+        "title": "Kamus Bahasa Jawa–Indonesia — guntur"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "jati",
+      "n": "Jati",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Sejati; tulen.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/jati",
+        "title": "Kamus Bahasa Jawa–Indonesia — jati"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "joko",
+      "n": "Joko",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Pemuda; perjaka.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/jaka",
+        "title": "Kamus Bahasa Jawa–Indonesia — jaka"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk jaka. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "kukuh",
+      "n": "Kukuh",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Kuat; teguh.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/kukuh",
+        "title": "Kamus Bahasa Jawa–Indonesia — kukuh"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "luhur",
+      "n": "Luhur",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Mulia; berwatak utama.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/luhur",
+        "title": "Kamus Bahasa Jawa–Indonesia — luhur"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "panji",
+      "n": "Panji",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bendera.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/panji",
+        "title": "Kamus Bahasa Jawa–Indonesia — panji"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "raharjo",
+      "n": "Raharjo",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Selamat; sejahtera.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/raharja",
+        "title": "Kamus Bahasa Jawa–Indonesia — raharja"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk raharja. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "raka",
+      "n": "Raka",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Kakak.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/raka",
+        "title": "Kamus Bahasa Jawa–Indonesia — raka"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "wahyu",
+      "n": "Wahyu",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Petunjuk; anugerah dari Tuhan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/wahyu",
+        "title": "Kamus Bahasa Jawa–Indonesia — wahyu"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "wibowo",
+      "n": "Wibowo",
+      "g": "L",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Keluhuran; kewibawaan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/wibawa",
+        "title": "Kamus Bahasa Jawa–Indonesia — wibawa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk wibawa. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "asih",
+      "n": "Asih",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Kasih sayang.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/asih",
+        "title": "Kamus Bahasa Jawa–Indonesia — asih"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "ayu",
+      "n": "Ayu",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Cantik; menawan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/ayu",
+        "title": "Kamus Bahasa Jawa–Indonesia — ayu"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "cahaya",
+      "n": "Cahaya",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Cahaya; sinar.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/cahaya#Indonesian",
+        "title": "Wiktionary contributors — cahaya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "gadis",
+      "n": "Gadis",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Anak perempuan; dara.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/gadis#Indonesian",
+        "title": "Wiktionary contributors — gadis"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "harum",
+      "n": "Harum",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Wangi.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/harum#Indonesian",
+        "title": "Wiktionary contributors — harum"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "intan",
+      "n": "Intan",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Intan; berlian.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/intan#Indonesian",
+        "title": "Wiktionary contributors — intan"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "kasih",
+      "n": "Kasih",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Kasih sayang.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/kasih#Indonesian",
+        "title": "Wiktionary contributors — kasih"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "kencana",
+      "n": "Kencana",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Emas.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/kencana",
+        "title": "Kamus Bahasa Jawa–Indonesia — kencana"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "kenanga",
+      "n": "Kenanga",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bunga kenanga.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/kenanga",
+        "title": "Kamus Bahasa Jawa–Indonesia — kenanga"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "lestari",
+      "n": "Lestari",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Tetap; lestari.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/lestari",
+        "title": "Kamus Bahasa Jawa–Indonesia — lestari"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "lintang",
+      "n": "Lintang",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bintang.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/lintang",
+        "title": "Kamus Bahasa Jawa–Indonesia — lintang"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "mawar",
+      "n": "Mawar",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bunga mawar.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/mawar",
+        "title": "Kamus Bahasa Jawa–Indonesia — mawar"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "melati",
+      "n": "Melati",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Bunga melati.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/melati#Indonesian",
+        "title": "Wiktionary contributors — melati"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "mentari",
+      "n": "Mentari",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Matahari.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/mentari#Indonesian",
+        "title": "Wiktionary contributors — mentari"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "mutiara",
+      "n": "Mutiara",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Indonesia",
+      "m": "Mutiara.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/mutiara#Indonesian",
+        "title": "Wiktionary contributors — mutiara"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "rahayu",
+      "n": "Rahayu",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Selamat; sejahtera.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/rahayu",
+        "title": "Kamus Bahasa Jawa–Indonesia — rahayu"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "sari",
+      "n": "Sari",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Indah; bunga.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/sari",
+        "title": "Kamus Bahasa Jawa–Indonesia — sari"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "sekar",
+      "n": "Sekar",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bunga.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/sekar",
+        "title": "Kamus Bahasa Jawa–Indonesia — sekar"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "utami",
+      "n": "Utami",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Utama.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/utami",
+        "title": "Kamus Bahasa Jawa–Indonesia — utami"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "wangi",
+      "n": "Wangi",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Harum.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/wangi",
+        "title": "Kamus Bahasa Jawa–Indonesia — wangi"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "wulan",
+      "n": "Wulan",
+      "g": "P",
+      "region": "Indonesia/Nusantara",
+      "o": "Jawa",
+      "m": "Bulan.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://kbji.kemendikdasmen.go.id/kata/wulan",
+        "title": "Kamus Bahasa Jawa–Indonesia — wulan"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Bahasa yang ditampilkan mengikuti sumber arti; kelompok Nusantara tidak berarti semua akar katanya asli Indonesia."
+    },
+    {
+      "id": "abhaya",
+      "n": "Abhaya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Tidak takut; berani.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%AD%E0%A4%AF#Sanskrit",
+        "title": "Wiktionary contributors — अभय"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "aditya",
+      "n": "Aditya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Matahari.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/aditya",
+        "title": "SanskritDictionary.org — aditya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "akasha",
+      "n": "Akasha",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Langit.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/akasa",
+        "title": "SanskritDictionary.org — akasa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk ākāśa."
+    },
+    {
+      "id": "ananda",
+      "n": "Ananda",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kebahagiaan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/ananda",
+        "title": "SanskritDictionary.org — ananda"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "ananta",
+      "n": "Ananta",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Tidak terbatas.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/ananta",
+        "title": "SanskritDictionary.org — ananta"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "anila",
+      "n": "Anila",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Angin.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/anila",
+        "title": "SanskritDictionary.org — anila"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "arjuna",
+      "n": "Arjuna",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Putih; terang.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%B0%E0%A5%8D%E0%A4%9C%E0%A5%81%E0%A4%A8#Sanskrit",
+        "title": "Wiktionary contributors — अर्जुन"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "ashoka",
+      "n": "Ashoka",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bebas dari kesedihan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%B6%E0%A5%8B%E0%A4%95#Sanskrit",
+        "title": "Wiktionary contributors — अशोक"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk aśoka. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "prasanna",
+      "n": "Prasanna",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Gembira; puas.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/prasanna",
+        "title": "SanskritDictionary.org — prasanna"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "chandra",
+      "n": "Chandra",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bulan.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/candra",
+        "title": "SanskritDictionary.org — candra"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk candra."
+    },
+    {
+      "id": "daya",
+      "n": "Daya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Belas kasih.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/daya",
+        "title": "SanskritDictionary.org — daya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "dharma",
+      "n": "Dharma",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Ajaran agama; kewajiban.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/dharma",
+        "title": "SanskritDictionary.org — dharma"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "dipta",
+      "n": "Dipta",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bersinar.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/dipta",
+        "title": "SanskritDictionary.org — dipta"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "harsa",
+      "n": "Harsa",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kegembiraan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/harsa",
+        "title": "SanskritDictionary.org — harsa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "teja",
+      "n": "Teja",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Cahaya; kilau.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/teja",
+        "title": "SanskritDictionary.org — teja"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "sagara",
+      "n": "Sagara",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Samudra.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/sagara",
+        "title": "SanskritDictionary.org — sagara"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "narendra",
+      "n": "Narendra",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Raja.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/narendra",
+        "title": "SanskritDictionary.org — narendra"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "pradana",
+      "n": "Pradana",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Utama; terkemuka.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A7%E0%A4%BE%E0%A4%A8#Sanskrit",
+        "title": "Wiktionary contributors — प्रधान"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk pradhāna. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "prakash",
+      "n": "Prakash",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Penerangan; cahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/prakasa",
+        "title": "SanskritDictionary.org — prakasa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk prakāśa."
+    },
+    {
+      "id": "satya",
+      "n": "Satya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Benar; jujur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/satya",
+        "title": "SanskritDictionary.org — satya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "vijaya",
+      "n": "Vijaya",
+      "g": "L",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kemenangan.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/vijaya",
+        "title": "SanskritDictionary.org — vijaya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "amala",
+      "n": "Amala",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bersih; murni.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/amala",
+        "title": "SanskritDictionary.org — amala"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "amrita",
+      "n": "Amrita",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Abadi; tidak binasa.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%85%E0%A4%AE%E0%A5%83%E0%A4%A4#Sanskrit",
+        "title": "Wiktionary contributors — अमृत"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "priya",
+      "n": "Priya",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Terkasih; menyenangkan.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/priya",
+        "title": "SanskritDictionary.org — priya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "anjali",
+      "n": "Anjali",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Telapak tangan yang dirapatkan sebagai penghormatan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/anjali",
+        "title": "SanskritDictionary.org — anjali"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "citra",
+      "n": "Citra",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Indah; menakjubkan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/citra",
+        "title": "SanskritDictionary.org — citra"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "deepa",
+      "n": "Deepa",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Pelita.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/dipa",
+        "title": "SanskritDictionary.org — dipa"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk dīpa."
+    },
+    {
+      "id": "devi",
+      "n": "Devi",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Dewi.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/devi",
+        "title": "SanskritDictionary.org — devi"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "divya",
+      "n": "Divya",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Ilahi; indah.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/divya",
+        "title": "SanskritDictionary.org — divya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "indira",
+      "n": "Indira",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Keindahan; kemegahan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%BF%E0%A4%B0%E0%A4%BE#Sanskrit",
+        "title": "Wiktionary contributors — इन्दिरा"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "jyoti",
+      "n": "Jyoti",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Cahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/jyoti",
+        "title": "SanskritDictionary.org — jyoti"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "kanti",
+      "n": "Kanti",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kilau; kemegahan.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/kanti",
+        "title": "SanskritDictionary.org — kanti"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "karuna",
+      "n": "Karuna",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Belas kasih.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/karuna",
+        "title": "SanskritDictionary.org — karuna"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "kirana",
+      "n": "Kirana",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Sinar matahari.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/kirana",
+        "title": "SanskritDictionary.org — kirana"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "kusuma",
+      "n": "Kusuma",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bunga.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/kusuma",
+        "title": "SanskritDictionary.org — kusuma"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "lalita",
+      "n": "Lalita",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Lembut; menawan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/lalita",
+        "title": "SanskritDictionary.org — lalita"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "lila",
+      "n": "Lila",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Permainan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/lila",
+        "title": "SanskritDictionary.org — lila"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "malati",
+      "n": "Malati",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bunga melati putih (Jasminum grandiflorum).",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%A4%E0%A5%80#Sanskrit",
+        "title": "Wiktionary contributors — मालती"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "purnima",
+      "n": "Purnima",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Hari atau malam bulan purnama.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3%E0%A4%BF%E0%A4%AE%E0%A4%BE#Sanskrit",
+        "title": "Wiktionary contributors — पूर्णिमा"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "shanti",
+      "n": "Shanti",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Kedamaian.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/santi",
+        "title": "SanskritDictionary.org — santi"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ejaan nama disesuaikan dari bentuk śānti."
+    },
+    {
+      "id": "tara",
+      "n": "Tara",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Bintang.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://en.wiktionary.org/wiki/%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%BE#Sanskrit",
+        "title": "Wiktionary contributors — तारा"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian. Ringkasan diadaptasi dari Wiktionary contributors, CC BY-SA 4.0."
+    },
+    {
+      "id": "vidya",
+      "n": "Vidya",
+      "g": "P",
+      "region": "Sanskerta",
+      "o": "Sanskerta",
+      "m": "Pengetahuan; pembelajaran.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://sanskritdictionary.org/vidya",
+        "title": "SanskritDictionary.org — vidya"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "jawad",
+      "n": "Jawad",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Dermawan.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=29",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 29"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "hamid",
+      "n": "Hamid",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Bersyukur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=29",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 29"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "khalil",
+      "n": "Khalil",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Sahabat karib.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=29",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 29"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "siraj",
+      "n": "Siraj",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Pelita.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "shahir",
+      "n": "Shahir",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terkenal.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "sadiq",
+      "n": "Sadiq",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Jujur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "tayib",
+      "n": "Tayib",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Baik.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "adil",
+      "n": "Adil",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Adil.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "fatih",
+      "n": "Fatih",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Pembuka.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=30",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 30"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "qasim",
+      "n": "Qasim",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Pembagi.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mamun",
+      "n": "Mamun",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Dapat dipercaya.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mubin",
+      "n": "Mubin",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Jelas.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "matin",
+      "n": "Matin",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Kokoh.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mujtaba",
+      "n": "Mujtaba",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terpilih.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "muhammad",
+      "n": "Muhammad",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terpuji.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mahmud",
+      "n": "Mahmud",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terpuji.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=31",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 31"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mustafa",
+      "n": "Mustafa",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Terpilih.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=32",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 32"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mansur",
+      "n": "Mansur",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Menang.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=32",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 32"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "munir",
+      "n": "Munir",
+      "g": "L",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Bercahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=32",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 32"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "alya",
+      "n": "Alya",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Luhur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "amani",
+      "n": "Amani",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Cita-cita.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "amina",
+      "n": "Amina",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Setia.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "arwa",
+      "n": "Arwa",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Elok.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=123",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 123"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "aziza",
+      "n": "Aziza",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Tersayang.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=124",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 124"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "adiba",
+      "n": "Adiba",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Sastrawati.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=124",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 124"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "hala",
+      "n": "Hala",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Lingkar cahaya.",
+      "themes": [
+        "cahaya"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "hamida",
+      "n": "Hamida",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Bersyukur.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "haniya",
+      "n": "Haniya",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Bahagia.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "hazima",
+      "n": "Hazima",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Teguh.",
+      "themes": [
+        "keberanian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "habiba",
+      "n": "Habiba",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Tercinta.",
+      "themes": [
+        "kasih"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "hadiya",
+      "n": "Hadiya",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Hadiah.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=136",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 136"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "jamila",
+      "n": "Jamila",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Cantik.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=142",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 142"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "janna",
+      "n": "Janna",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Surga.",
+      "themes": [
+        "kedamaian"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=142",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 142"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "jawhara",
+      "n": "Jawhara",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Permata.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=142",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 142"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "muna",
+      "n": "Muna",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Harapan.",
+      "themes": [
+        "bahagia"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=153",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 153"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "mushira",
+      "n": "Mushira",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Penasihat.",
+      "themes": [
+        "bijaksana"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=153",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 153"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "nabila",
+      "n": "Nabila",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Mulia.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=157",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 157"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    },
+    {
+      "id": "nafisa",
+      "n": "Nafisa",
+      "g": "P",
+      "region": "Arab",
+      "o": "Arab",
+      "m": "Berharga.",
+      "themes": [
+        "kebaikan"
+      ],
+      "status": "source_checked",
+      "checked_at": "2026-09-09",
+      "source": {
+        "url": "https://islamicbulletin.org/en/ebooks/women/muslim_names.pdf#page=157",
+        "title": "Muslim Names — The Islamic Bulletin, halaman PDF 157"
+      },
+      "note": "Arti diringkas dalam bahasa Indonesia. Tema dan jenis kelamin adalah pengelompokan saran nama; bukan terjemahan tambahan atau pembatasan pemakaian."
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+<!-- Kamus nama memakai katalog bersama di assets/data/baby-names.json. -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamus Nama Bayi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F1E4; }
+  #kamus-nama-bayi-app{
+    --paper:#F7F1E4; --paper2:#F1E9D6; --ink:#2B2620; --ink-soft:#6B6152;
+    --indigo:#22334C; --indigo2:#3D5A80; --brass:#AE8A50; --brass-light:#D8C08F;
+    --rose:#A9616C; --slate:#3F6B67; --line:#DCCFAE;
+    all: initial;
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Work Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  #kamus-nama-bayi-app *{ box-sizing: border-box; }
+  #kamus-nama-bayi-app .kb-wrap{ max-width: 1080px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- HERO ---------- */
+  #kamus-nama-bayi-app .kb-hero{
+    background: linear-gradient(180deg, var(--indigo) 0%, #1a2740 100%);
+    color: var(--paper);
+    padding: 56px 20px 88px;
+    position: relative;
+    overflow: hidden;
+  }
+  #kamus-nama-bayi-app .kb-hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: radial-gradient(var(--brass-light) 0.6px, transparent 0.6px);
+    background-size: 22px 22px;
+    opacity: 0.06;
+  }
+  #kamus-nama-bayi-app .kb-hero-inner{ max-width: 1080px; margin: 0 auto; position: relative; }
+  #kamus-nama-bayi-app .kb-eyebrow{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brass-light); margin: 0 0 14px; display:flex; align-items:center; gap:10px;
+  }
+  #kamus-nama-bayi-app .kb-eyebrow::before{ content:""; width:26px; height:1px; background: var(--brass-light); display:inline-block; }
+  #kamus-nama-bayi-app .kb-title{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.02;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  #kamus-nama-bayi-app .kb-title em{
+    font-style: italic;
+    font-weight: 500;
+    color: var(--brass-light);
+  }
+  #kamus-nama-bayi-app .kb-sub{
+    font-size: 16.5px; max-width: 560px; color: #DCD5C4; margin: 0 0 34px;
+  }
+  #kamus-nama-bayi-app .kb-stats{
+    display:flex; gap: 28px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  #kamus-nama-bayi-app .kb-stat-num{
+    font-family:'Fraunces', serif; font-size: 26px; font-weight:700; color:#fff;
+  }
+  #kamus-nama-bayi-app .kb-stat-label{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.06em;
+    color: var(--brass-light); text-transform: uppercase;
+  }
+
+  /* ---------- SEARCH / FILTER BAR ---------- */
+  #kamus-nama-bayi-app .kb-toolbar{
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: -52px;
+    position: relative;
+    box-shadow: 0 12px 30px -14px rgba(34,51,76,0.35);
+  }
+  #kamus-nama-bayi-app .kb-search-row{
+    display:flex; gap:12px; flex-wrap: wrap; margin-bottom: 14px;
+  }
+  #kamus-nama-bayi-app .kb-search{
+    flex: 1 1 240px;
+    display:flex; align-items:center; gap:10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 10px;
+    padding: 11px 14px;
+  }
+  #kamus-nama-bayi-app .kb-search svg{ flex-shrink:0; color: var(--ink-soft); }
+  #kamus-nama-bayi-app .kb-search input{
+    all: unset; flex:1; font-family:'Work Sans',sans-serif; font-size: 15px; color: var(--ink);
+  }
+  #kamus-nama-bayi-app .kb-search input::placeholder{ color:#A79E8C; }
+  #kamus-nama-bayi-app select.kb-select{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14.5px;
+    padding: 11px 34px 11px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6z" fill="%23806e4d"/></svg>') no-repeat right 13px center;
+    appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    color: var(--ink);
+    min-width: 150px;
+  }
+  #kamus-nama-bayi-app .kb-gender-toggle{ display:flex; gap:6px; }
+  #kamus-nama-bayi-app .kb-chip{
+    font-family:'Work Sans',sans-serif; font-size: 13.5px; font-weight:500;
+    padding: 9px 15px; border-radius: 999px; border:1px solid var(--line);
+    background:#fff; color: var(--ink-soft); cursor:pointer; transition: all .15s ease;
+  }
+  #kamus-nama-bayi-app .kb-chip:hover{ border-color: var(--brass); color: var(--ink); }
+  #kamus-nama-bayi-app .kb-chip.active{ background: var(--indigo); border-color: var(--indigo); color:#fff; }
+  #kamus-nama-bayi-app .kb-chip.active.p{ background: var(--rose); border-color: var(--rose); }
+  #kamus-nama-bayi-app .kb-chip.active.l{ background: var(--slate); border-color: var(--slate); }
+
+  #kamus-nama-bayi-app .kb-alpha{
+    display:flex; flex-wrap:wrap; gap: 4px; padding-top: 12px; border-top: 1px solid var(--line);
+  }
+  #kamus-nama-bayi-app .kb-alpha button{
+    font-family:'JetBrains Mono', monospace; font-size: 12px;
+    width: 26px; height: 26px; border-radius: 6px; border: 1px solid transparent;
+    background: transparent; color: var(--ink-soft); cursor: pointer;
+  }
+  #kamus-nama-bayi-app .kb-alpha button:hover{ background: var(--paper2); color: var(--ink); }
+  #kamus-nama-bayi-app .kb-alpha button:disabled{ opacity: 0.28; cursor: default; }
+  #kamus-nama-bayi-app .kb-alpha button:disabled:hover{ background:transparent; }
+
+  /* ---------- RESULTS META ---------- */
+  #kamus-nama-bayi-app .kb-meta{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin: 30px 0 6px; font-family:'JetBrains Mono', monospace; font-size:12.5px; color: var(--ink-soft);
+  }
+  #kamus-nama-bayi-app .kb-meta button{
+    all:unset; cursor:pointer; color: var(--indigo2); font-family:'JetBrains Mono', monospace; font-size:12.5px;
+    text-decoration: underline; text-underline-offset:3px;
+  }
+
+  /* ---------- LETTER SECTIONS ---------- */
+  #kamus-nama-bayi-app .kb-section{ margin-top: 34px; }
+  #kamus-nama-bayi-app .kb-letter-head{
+    display:flex; align-items:center; gap:16px; margin-bottom: 16px;
+  }
+  #kamus-nama-bayi-app .kb-letter-cap{
+    font-family:'Fraunces', serif; font-weight:900; font-size: 40px; color: var(--indigo);
+    border: 1.5px solid var(--brass); border-radius: 10px; width: 56px; height: 56px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    background: repeating-linear-gradient(135deg, var(--paper2), var(--paper2) 6px, var(--paper) 6px, var(--paper) 12px);
+  }
+  #kamus-nama-bayi-app .kb-letter-line{ flex:1; height:1px; background: var(--line); }
+  #kamus-nama-bayi-app .kb-letter-count{ font-family:'JetBrains Mono', monospace; font-size:12px; color: var(--ink-soft); }
+
+  #kamus-nama-bayi-app .kb-grid{
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px;
+  }
+  #kamus-nama-bayi-app .kb-card{
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 16px 14px; position: relative; transition: box-shadow .15s ease, transform .15s ease;
+  }
+  #kamus-nama-bayi-app .kb-card:hover{ box-shadow: 0 10px 24px -14px rgba(34,51,76,0.4); transform: translateY(-1px); }
+  #kamus-nama-bayi-app .kb-card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+  #kamus-nama-bayi-app .kb-name{ font-family:'Fraunces', serif; font-weight:600; font-size:19px; color: var(--ink); margin:0; }
+  #kamus-nama-bayi-app .kb-fav{
+    all:unset; cursor:pointer; font-size:18px; line-height:1; color:#D8CDB4; flex-shrink:0; padding:2px;
+  }
+  #kamus-nama-bayi-app .kb-fav.active{ color: var(--brass); }
+  #kamus-nama-bayi-app .kb-tags{ display:flex; gap:6px; margin: 7px 0 9px; }
+  #kamus-nama-bayi-app .kb-tag{
+    font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:.03em;
+    padding: 2px 8px; border-radius: 999px; text-transform: uppercase;
+  }
+  #kamus-nama-bayi-app .kb-tag.g-l{ background: rgba(63,107,103,0.12); color: var(--slate); }
+  #kamus-nama-bayi-app .kb-tag.g-p{ background: rgba(169,97,108,0.12); color: var(--rose); }
+  #kamus-nama-bayi-app .kb-tag.origin{ background: var(--paper2); color: var(--ink-soft); }
+  #kamus-nama-bayi-app .kb-meaning{ font-size: 14px; color: #4B4436; margin: 0; }
+
+  #kamus-nama-bayi-app .kb-empty{
+    text-align:center; padding: 70px 20px; color: var(--ink-soft);
+  }
+  #kamus-nama-bayi-app .kb-empty strong{ font-family:'Fraunces', serif; font-size:20px; color: var(--ink); display:block; margin-bottom:6px; }
+
+  #kamus-nama-bayi-app .kb-footer{
+    margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--line);
+    font-family:'JetBrains Mono', monospace; font-size: 11.5px; color: var(--ink-soft);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  @media (max-width: 560px){
+    #kamus-nama-bayi-app .kb-hero{ padding: 44px 16px 100px; }
+    #kamus-nama-bayi-app .kb-toolbar{ margin-top:-70px; }
+    #kamus-nama-bayi-app .kb-search-row{ flex-direction:column; }
+    #kamus-nama-bayi-app .kb-search{ flex: 0 0 auto; width: 100%; }
+    #kamus-nama-bayi-app select.kb-select{ width:100%; }
+  }
+  #kamus-nama-bayi-app *:focus-visible{ outline: 2px solid var(--brass); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce){
+    #kamus-nama-bayi-app *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="kamus-nama-bayi-app">
+  <div class="kb-hero">
+    <div class="kb-hero-inner">
+      <p class="kb-eyebrow">Kamus Nama Bayi</p>
+      <h1 class="kb-title">Nama adalah <em>doa</em> pertama<br>yang kita titipkan.</h1>
+      <p class="kb-sub">Pilihan nama Arab, Eropa, Indonesia/Nusantara, dan Sanskerta beserta arti dan rujukannya.</p>
+      <div class="kb-stats">
+        <div><div class="kb-stat-num" id="kb-stat-total">0</div><div class="kb-stat-label">Total nama</div></div>
+        <div><div class="kb-stat-num" id="kb-stat-l">0</div><div class="kb-stat-label">Laki-laki</div></div>
+        <div><div class="kb-stat-num" id="kb-stat-p">0</div><div class="kb-stat-label">Perempuan</div></div>
+        <div><div class="kb-stat-num" id="kb-stat-origin">0</div><div class="kb-stat-label">Asal bahasa</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kb-wrap">
+    <div class="kb-toolbar">
+      <div class="kb-search-row">
+        <label class="kb-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="kb-search-input" type="text" placeholder="Cari nama atau arti… misal “cahaya” atau “Clara”" autocomplete="off">
+        </label>
+        <select id="kb-origin-select" class="kb-select"><option value="all">Semua asal bahasa</option></select>
+      </div>
+      <div class="kb-search-row" style="margin-bottom:0;">
+        <div class="kb-gender-toggle" role="group" aria-label="Filter jenis kelamin">
+          <button class="kb-chip active" data-gender="all">Semua</button>
+          <button class="kb-chip l" data-gender="L">Laki-laki</button>
+          <button class="kb-chip p" data-gender="P">Perempuan</button>
+        </div>
+      </div>
+      <div class="kb-alpha" id="kb-alpha" aria-label="Lompat ke huruf"></div>
+    </div>
+
+    <div class="kb-meta">
+      <span id="kb-result-count">Menampilkan semua nama</span>
+      <button id="kb-fav-toggle" type="button">☆ Lihat favorit</button>
+    </div>
+
+    <div id="kb-results"></div>
+
+    <div class="kb-footer">
+      <span>Arti diringkas dalam bahasa Indonesia. Baca rujukan tiap nama untuk penjelasan asalnya.</span>
+      <span id="kb-fav-count-label">0 nama disimpan di perangkat ini</span>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/baby-names.js?v=20260909-2"></script>
+<script>
+(function(){
+  "use strict";
+
+  var DATA = [];
+
+  var app = document.getElementById('kamus-nama-bayi-app');
+  var els = {
+    search: app.querySelector('#kb-search-input'),
+    origin: app.querySelector('#kb-origin-select'),
+    genderChips: app.querySelectorAll('.kb-chip[data-gender]'),
+    alpha: app.querySelector('#kb-alpha'),
+    results: app.querySelector('#kb-results'),
+    count: app.querySelector('#kb-result-count'),
+    favToggle: app.querySelector('#kb-fav-toggle'),
+    favLabel: app.querySelector('#kb-fav-count-label'),
+    statTotal: app.querySelector('#kb-stat-total'),
+    statL: app.querySelector('#kb-stat-l'),
+    statP: app.querySelector('#kb-stat-p'),
+    statOrigin: app.querySelector('#kb-stat-origin')
+  };
+
+  var state = { q: "", gender: "all", origin: "all", showFavOnly: false };
+  var favorites = {};
+  var STORAGE_KEY = "kamus-nama-bayi:favorites";
+
+  function loadFavorites(){
+    try { var stored=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}'); DATA.forEach(function(d){if(stored && stored[d.n]===true)favorites[d.n]=true;}); } catch(_) {}
+    renderFavCount(); render();
+  }
+  function saveFavorites(){
+    try {localStorage.setItem(STORAGE_KEY,JSON.stringify(favorites));}
+    catch(_){els.favLabel.textContent='Favorit hanya tersimpan selama halaman ini terbuka.';return false;}
+    return true;
+  }
+  function toggleFav(name){
+    if (favorites[name]) delete favorites[name]; else favorites[name] = true;
+    if (saveFavorites()) renderFavCount();
+    render();
+  }
+  function renderFavCount(){
+    var n = Object.keys(favorites).length;
+    els.favLabel.textContent = n + (n === 1 ? " nama disimpan di perangkat ini" : " nama disimpan di perangkat ini");
+  }
+
+  function init(){
+    var origins = Array.from(new Set(DATA.map(function(d){ return d.o; }))).sort();
+    origins.forEach(function(o){
+      var opt = document.createElement('option');
+      opt.value = o; opt.textContent = o;
+      els.origin.appendChild(opt);
+    });
+
+    var letters = Array.from(new Set(DATA.map(function(d){ return d.n[0].toUpperCase(); })));
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(function(L){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = L;
+      var has = letters.indexOf(L) !== -1;
+      btn.disabled = !has;
+      if (has){
+        btn.addEventListener('click', function(){
+          var target = app.querySelector('[data-letter-section="' + L + '"]');
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+      els.alpha.appendChild(btn);
+    });
+
+    els.statTotal.textContent = DATA.length;
+    els.statL.textContent = DATA.filter(function(d){ return d.g === 'L'; }).length;
+    els.statP.textContent = DATA.filter(function(d){ return d.g === 'P'; }).length;
+    els.statOrigin.textContent = origins.length;
+
+    els.search.addEventListener('input', function(e){ state.q = e.target.value.trim().toLowerCase(); render(); });
+    els.origin.addEventListener('change', function(e){ state.origin = e.target.value; render(); });
+    els.genderChips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        els.genderChips.forEach(function(c){ c.classList.remove('active'); });
+        chip.classList.add('active');
+        state.gender = chip.getAttribute('data-gender');
+        render();
+      });
+    });
+    els.favToggle.addEventListener('click', function(){
+      state.showFavOnly = !state.showFavOnly;
+      els.favToggle.textContent = state.showFavOnly ? "★ Tampilkan semua" : "☆ Lihat favorit";
+      render();
+    });
+
+    loadFavorites();
+  }
+
+  function filteredData(){
+    return DATA.filter(function(d){
+      if (state.showFavOnly && !favorites[d.n]) return false;
+      if (state.gender !== 'all' && d.g !== state.gender) return false;
+      if (state.origin !== 'all' && d.o !== state.origin) return false;
+      if (state.q){
+        var hay = (d.n + ' ' + d.m).toLowerCase();
+        if (hay.indexOf(state.q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+
+  function render(){
+    var data = filteredData().sort(function(a,b){ return a.n.localeCompare(b.n); });
+
+    els.count.textContent = state.showFavOnly
+      ? (data.length + " nama favorit")
+      : (data.length === DATA.length ? "Menampilkan semua " + data.length + " nama" : "Ditemukan " + data.length + " nama");
+
+    els.results.innerHTML = "";
+
+    if (data.length === 0){
+      var empty = document.createElement('div');
+      empty.className = 'kb-empty';
+      empty.innerHTML = '<strong>Nama tidak ditemukan</strong>Coba ubah kata kunci atau filter yang digunakan.';
+      els.results.appendChild(empty);
+      return;
+    }
+
+    var groups = {};
+    data.forEach(function(d){
+      var L = d.n[0].toUpperCase();
+      if (!groups[L]) groups[L] = [];
+      groups[L].push(d);
+    });
+
+    Object.keys(groups).sort().forEach(function(L){
+      var section = document.createElement('div');
+      section.className = 'kb-section';
+      section.setAttribute('data-letter-section', L);
+
+      var head = document.createElement('div');
+      head.className = 'kb-letter-head';
+      head.innerHTML = '<div class="kb-letter-cap">' + L + '</div><div class="kb-letter-line"></div><div class="kb-letter-count">' + groups[L].length + ' nama</div>';
+      section.appendChild(head);
+
+      var grid = document.createElement('div');
+      grid.className = 'kb-grid';
+
+      groups[L].forEach(function(d){
+        var card = document.createElement('div');
+        card.className = 'kb-card';
+        var isFav = !!favorites[d.n];
+        card.innerHTML =
+          '<div class="kb-card-top">' +
+            '<p class="kb-name">' + escapeHtml(d.n) + '</p>' +
+            '<button class="kb-fav' + (isFav ? ' active' : '') + '" aria-label="Simpan ' + escapeHtml(d.n) + ' ke favorit" data-name="' + escapeHtml(d.n) + '">' + (isFav ? '★' : '☆') + '</button>' +
+          '</div>' +
+          '<div class="kb-tags">' +
+            '<span class="kb-tag ' + (d.g === 'L' ? 'g-l' : 'g-p') + '">' + (d.g === 'L' ? 'Laki-laki' : 'Perempuan') + '</span>' +
+            '<span class="kb-tag origin">' + escapeHtml(d.o) + '</span>' +
+          '</div>' +
+          '<p class="kb-meaning">' + escapeHtml(d.m) + '</p>';
+        var source=document.createElement('a');
+        source.href=BabyNames.sourceUrl(d.source.url);source.target='_blank';source.rel='noopener noreferrer';
+        source.textContent='Rujukan: '+d.source.title+(new URL(d.source.url).hostname==='en.wiktionary.org'?' (CC BY-SA 4.0; arti diringkas)':'');source.style.cssText='display:block;margin-top:10px;font-size:11px;color:#376b75';
+        card.appendChild(source);
+        card.querySelector('.kb-fav').addEventListener('click', function(){ toggleFav(d.n); });
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      els.results.appendChild(section);
+    });
+  }
+
+  els.count.textContent='Sedang membuka daftar nama…';
+  function loadCatalog(){
+    BabyNames.load('assets/data/baby-names.json?v=20260909-2').then(function(data){DATA=data.names;init();}).catch(function(){
+      els.count.textContent='Daftar nama belum bisa dibuka.';
+      els.results.replaceChildren();
+      var retry=document.createElement('button');retry.type='button';retry.className='kb-chip';retry.textContent='Coba buka lagi';
+      retry.addEventListener('click',function(){retry.disabled=true;loadCatalog();});els.results.appendChild(retry);
+    });
+  }
+  loadCatalog();
+})();
+</script>
+</body>
+</html>
